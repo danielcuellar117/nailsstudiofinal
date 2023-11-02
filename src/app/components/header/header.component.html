@@ -1,0 +1,24 @@
+<header class="header">
+    <div class="nav_toggle" id="_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo-header">
+      <a routerLink="./index.html"><img src="../../../assets/images/logo-inicial.png" alt="Logotipo inicial de la marca"></a>
+    </div>
+      <nav>
+        <ul class="nav-links" id="_links">
+          <li><a routerLink="tienda.html">Tienda</a></li>
+          <li><a routerLink="talleres.html">Talleres  </a></li>
+          <li><a routerLink="servicios.html">Servicios</a></li>
+        </ul>
+      </nav>
+      <a routerLink="agenda.html" class="btn"><button>Agenda una cita</button></a>   
+  </header>
+  <script>
+    _toggle.onclick=()=>{
+      _links.classList.toggle("open")
+      _toggle.classList.toggle("close")
+    }
+  </script>
