@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { AsideComponent } from './components/aside/aside.component';
+import { TallerComponent } from './components/taller/taller.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AsideComponent } from './components/aside/aside.component';
     HeaderComponent,
     FooterComponent,
     CardsComponent,
-    AsideComponent
+    AsideComponent,
+    TallerComponent
 
   ],
   imports: [
