@@ -3,14 +3,9 @@ h2 {
     font-size: 2rem;
     margin: 1rem ;
 }
-
-.content_store {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    float: right;
-    max-width: 100%;
-    width: 100%;
+.container{
+    text-align: center;
+    margin: 0rem;
 }
 
 .cards {
@@ -18,7 +13,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 0 0 2rem;
+    margin: 2rem 0;
 }
 .card {
     margin: .6rem;
