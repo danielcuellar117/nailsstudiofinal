@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-.header{
+/* .header{
     background-color: #ffdcdc;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 80px;
     padding: 5px 10%;
+} */
+.header {
+    height: 5rem;
+    background-color: #ffdcdc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: 5px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 .header .logo-header{
     cursor: pointer;
@@ -111,6 +124,10 @@
         transform-origin: 5px 0px;
         transition: all 0.2s linear;
     }
+    .open {
+        transform: translateX(0) !important;
+        transform: translateY(0) !important;
+    }
     .close span{
         transform: rotate(45deg) translate(0px,0px);
     }
@@ -120,18 +137,4 @@
     .close span:nth-child(3){
         transform: rotate(-45deg) translate(-5px, 1px);
     }
-    .open {
-        transform: translateX(0) !important;
-        transform: translateY(0) !important;
-    }
-    .secciones{
-        flex-direction: column;
-    }
-    .footer-inner{
-        flex-direction: column;
-        align-items: center;
-    }
-    .title-banner {
-        font-size: 2rem;
-        }
 }
