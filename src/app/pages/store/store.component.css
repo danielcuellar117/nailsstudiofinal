@@ -1,21 +1,20 @@
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem ;
+}
+.container{
+    text-align: center;
+    margin: 0rem;
+}
 
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
+    margin: 2rem 0;
 }
-
 .card {
-    margin: 2rem 1rem;
+    margin: .6rem;
 }
-   @media (max-width: 700px) {
-    .cards {
-        margin: 2rem 0;
-    }
-    .card {
-        margin: .4rem;
-    }
-
-  } 

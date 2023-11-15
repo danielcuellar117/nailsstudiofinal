@@ -105,7 +105,7 @@
         text-align: center;
         margin: 1%;
     }
-    .nav_toggle{
+    .nav_toggle {
         display: flex !important;
         flex-direction: column;
         margin: 15px;

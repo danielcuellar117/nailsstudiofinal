@@ -13,6 +13,9 @@ import { CardsComponent } from './components/cards/cards.component';
 import { BannerTiendaComponent } from './components/banner-tienda/banner-tienda.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InfoHomeComponent } from './components/info-home/info-home.component';
+import { AsideComponent } from './components/aside/aside.component';
+import { TallerComponent } from './components/taller/taller.component';
+import { CardTallerComponent } from './components/card-taller/card-taller.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,11 @@ import { InfoHomeComponent } from './components/info-home/info-home.component';
     FooterComponent,
     CardsComponent,
     BannerTiendaComponent,
-    InfoHomeComponent
+    InfoHomeComponent,
+    AsideComponent,
+    TallerComponent,
+    CardTallerComponent
+
   ],
   imports: [
     BrowserModule,
