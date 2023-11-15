@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,10 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @ViewChild('menu') menu!: ElementRef;
+  isMenuOpen = false;
+window: any;
 
-  ngAfterViewInit() {
-    // You can access/call the public methods
-    console.log( this.menu );
- }
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+}
 }

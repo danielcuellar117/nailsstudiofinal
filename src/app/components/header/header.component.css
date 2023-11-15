@@ -71,18 +71,13 @@
     color: #242424;
     transform: scale(1.1);
 }
+
+/* Aqui empieza el menu hamburguesa */
+
 .nav_toggle{
     display: none; /* Por defecto, ocultamos el icono de hamburguesa en pantallas grandes */
     flex-direction: column;
     cursor: pointer;
-}
-.bg-nailtools {
-    background-image: url( '../../../assets/images/nailtools.jpeg' );
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-
 }
 @media (max-width: 1081px) {
     .header {
@@ -93,7 +88,7 @@
     ul#_links {
         z-index: 1;
     }
-
+/* Menu Hamburguesa */
     .nav-links{
         position: absolute;
         top: 105px;
@@ -138,3 +133,22 @@
         transform: rotate(-45deg) translate(-5px, 1px);
     }
 }
+.menu-toggle {
+    display: none;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .menu {
+      display: block;
+      /* Agrega estilos adicionales para el menú en pantallas pequeñas */
+    }
+  }
+  

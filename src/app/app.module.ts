@@ -11,6 +11,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { BannerTiendaComponent } from './components/banner-tienda/banner-tienda.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InfoHomeComponent } from './components/info-home/info-home.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { BannerTiendaComponent } from './components/banner-tienda/banner-tienda.
     HeaderComponent,
     FooterComponent,
     CardsComponent,
-    BannerTiendaComponent
+    BannerTiendaComponent,
+    InfoHomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
