@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { TallerComponent } from './components/taller/taller.component';
+import { CardTallerComponent } from './components/card-taller/card-taller.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TallerComponent } from './components/taller/taller.component';
     FooterComponent,
     CardsComponent,
     AsideComponent,
-    TallerComponent
+    TallerComponent,
+    CardTallerComponent
 
   ],
   imports: [

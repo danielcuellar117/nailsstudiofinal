@@ -1,0 +1,18 @@
+.card-taller{
+    max-width: 300px;
+    max-height: 500px;
+    height: 100%;
+    /* border: solid 1px gray; */
+    padding: .5rem;
+}
+.card-img{
+    width: 100%;
+    height: 300px;
+}
+
+.card-info{
+    text-align: center;
+}
+.card-title{
+    margin: .8rem 0;
+}

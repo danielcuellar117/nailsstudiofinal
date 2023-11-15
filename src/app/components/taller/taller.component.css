@@ -1,13 +1,13 @@
 .taller{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 100%;
-    max-height: 300px;
-    margin: 2rem;
+    max-height: 360px;
+    margin: 3rem;
 }
 .img-taller{
     max-width: 100%;
-    width: 420px;
+    width: 430px;
     height: 100%;
     cursor: pointer;
     transition: transform 0.5s, box-shadow 0.5s;
@@ -18,9 +18,11 @@
 .taller-info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
+    height: 100%;
+    /* text-align: center; */
     transition: transform 0.5s, box-shadow 0.5s;
 }
 .taller-title{
@@ -29,7 +31,10 @@
 }
 .taller-text{
     font-size: 1.3rem;
+    text-align: start;
     font-family: 'Trebuchet MS';
+    letter-spacing: 1.5px;
+    /* font-family: 'Copperplate'; */
 }
 .taller-btn{
     width: 10rem;
