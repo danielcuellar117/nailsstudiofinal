@@ -1,22 +1,45 @@
 .requerimientos-principal{
-    background-color: #ffdcdc8e;
+    background-color: #FFF6F4 ;
+    background-image: url(../../../assets/images/patron.webp);
+    background-repeat: repeat;
+    background-size: 40px;
+    background-position: 0 10px;
+    box-shadow: 0 0 0 10px #fff inset;
+    background-attachment: fixed;
+    backface-visibility: hidden;
+    text-align: center; 
 }
 .requerimientos-outter{
     display: flex;
     justify-content: center;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-bottom: 2rem;
-    
-   
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;   
+    text-align: center;
 }
-
 .requerimientos-inner{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 2rem;                                                                                                                                                                                                                                                                                                                     
+    margin: 2rem;              
+    text-align: center;             
+    margin-left: 0;
+    margin-right: 0;                                                                                                                                                                                                                                                                                          
 }
 .requerimientos-title{
     margin: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.requerimientos-description{
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+
 }

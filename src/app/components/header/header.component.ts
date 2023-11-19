@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isMenuOpen = false;
-window: any;
-
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-}
+  menuVariable: boolean= false;
+  menu_icon_variable: boolean=false
+;  openMenu() {
+    this.menuVariable = !this.menuVariable;
+    this.menu_icon_variable= !this.menu_icon_variable;
+  }
 }

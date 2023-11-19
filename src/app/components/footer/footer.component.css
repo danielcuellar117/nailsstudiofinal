@@ -14,7 +14,7 @@
     gap: 1rem;
 }
 
-@media (max-width: 1081px) {
+@media (max-width: 1080px) {
 
     .footer-inner{
         flex-direction: column;
