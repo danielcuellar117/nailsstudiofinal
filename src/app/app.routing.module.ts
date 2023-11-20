@@ -7,12 +7,12 @@ import { TalleresComponent } from './pages/talleres/talleres.component';
 import { HomeComponent } from './pages/home/home.component';
 
 // const routes: Routes = [
-//   {path: "", component: HomeComponent},
-//   {path: "servicios", component: SevicesComponent},
-//   {path: "agenda-una-cita", component: AgendaComponent},
-//   {path: "tienda", component: StoreComponent},
-//   {path: "talleres", component: TalleresComponent},
-//   {path: "**", redirectTo: ""},
+  // {path: "", component: HomeComponent},
+  // {path: "servicios", component: SevicesComponent},
+  // {path: "agenda-una-cita", component: AgendaComponent},
+  // {path: "tienda", component: StoreComponent},
+  // {path: "talleres", component: TalleresComponent},
+  // {path: "**", redirectTo: ""},
 // ];
 
 const routes: Routes = [
@@ -21,6 +21,12 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import( './auth/auth.module' ).then( module => module.AuthModule )
   },
+  {path: "", component: HomeComponent},
+  {path: "servicios", component: SevicesComponent},
+  {path: "agenda-una-cita", component: AgendaComponent},
+  {path: "tienda", component: StoreComponent},
+  {path: "talleres", component: TalleresComponent},
+  {path: "**", redirectTo: ""},
   /** Ruta a los componentes del Modulo Dashboard */
   // {
   //   path: 'dashboard',
