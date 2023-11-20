@@ -350,27 +350,6 @@ body{
 }
 
 
-.footer-inner{
-    background-color: #ffdcdc;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.footer-inner .logo{
-    display: flex;
-    margin-left: 2rem;
-}
-.redes {
-    display: flex;
-    margin-right: 2rem;
-    gap: 1rem;
-}
-
-
-/** Mobile */
-
-
-
 /** Dispositivos mas grandes */
 @media ( min-width: 567px ) {
     .producto {
