@@ -18,6 +18,7 @@ import { TallerComponent } from './components/taller/taller.component';
 import { CardTallerComponent } from './components/card-taller/card-taller.component';
 import { AuthModule } from './auth/auth.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './auth/pages/main/main.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     InfoHomeComponent,
     AsideComponent,
     TallerComponent,
-    CardTallerComponent
+    CardTallerComponent,
 
   ],
   imports: [
