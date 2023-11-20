@@ -12,9 +12,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
+    /* align-items: center; */
+    margin: 1rem;
+    overflow-x: auto;
 }
-.card {
-    margin: .6rem;
-}
+

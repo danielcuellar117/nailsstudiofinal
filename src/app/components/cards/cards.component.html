@@ -1,10 +1,16 @@
 <div class="card">
-    <img class="card-img" src="assets/images/img-card.jpg" alt="Nombre del producto">
+    <img class="card-img" [src]="imagen.url" alt="Nombre del producto">
     <div class="card-info">
-      <h3>ESMALTE MASGLO</h3>
-      <p class="card-p">Un severo esmalte para tus uñas :v</p>
+      <h3>{{ imagen.titulo }}</h3>
+      <p class="card-p">{{ imagen.descripcion }}</p>
       <span class="card-price">$ 25.000 </span>
       <button class="card-btn">Comprar</button>
     </div>
 </div>
-  
+<!-- <div class="card">
+  <img [src]="imagen.url" alt="{{ imagen.descripcion }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ imagen.titulo }}</h5>
+    <p class="card-text">{{ imagen.descripcion }}</p>
+  </div>
+</div> -->
