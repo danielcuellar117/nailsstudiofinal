@@ -1,17 +1,10 @@
 
 <!-- todo:  aside -->
 <div class="container">
-    <app-aside class="aside"></app-aside>  
+    <app-aside class="aside"></app-aside>
     <div class="cards">
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
-        <app-cards class="card"></app-cards>
+      <div *ngFor="let imagen of imagenes">
+        <app-cards class="card" [imagen]="imagen"></app-cards>
+      </div>
     </div>
-
 </div>
