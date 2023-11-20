@@ -17,7 +17,7 @@ export class LoginComponent {
     password: [ '', [ Validators.required ] ]
   });
 
-  constructor( 
+  constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService
   ) {}
@@ -28,7 +28,7 @@ export class LoginComponent {
     this.authService.login( this.loginForm.value ).subscribe( ( data: boolean ) => {
       console.log( data );
 
-      // Valida si no se logra autenticar el usuario 
+      // Valida si no se logra autenticar el usuario
       if( ! data ) {
         this.classMessage = 'message error';
         this.message = 'Error de autenticacion';
@@ -39,7 +39,7 @@ export class LoginComponent {
         this.classMessage = '';
         this.message = '';
       }, 2000 );
-      
+
     });
 
   }

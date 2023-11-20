@@ -16,6 +16,8 @@ import { InfoHomeComponent } from './components/info-home/info-home.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { TallerComponent } from './components/taller/taller.component';
 import { CardTallerComponent } from './components/card-taller/card-taller.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './auth/pages/main/main.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,14 @@ import { CardTallerComponent } from './components/card-taller/card-taller.compon
     InfoHomeComponent,
     AsideComponent,
     TallerComponent,
-    CardTallerComponent
+    CardTallerComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
