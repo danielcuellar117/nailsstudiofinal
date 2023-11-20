@@ -16,6 +16,8 @@ import { InfoHomeComponent } from './components/info-home/info-home.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { TallerComponent } from './components/taller/taller.component';
 import { CardTallerComponent } from './components/card-taller/card-taller.component';
+import { AuthModule } from './auth/auth.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { CardTallerComponent } from './components/card-taller/card-taller.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AuthModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
