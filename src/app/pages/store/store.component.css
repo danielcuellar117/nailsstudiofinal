@@ -9,13 +9,11 @@ h2 {
 }
 
 .cards {
+    margin: 3rem 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: .2rem;
-    /* align-items: center; */
-    /* margin: 1rem; */
+    gap: 2rem;
     overflow-x: auto;
-    gap: .2rem;
 }
 
