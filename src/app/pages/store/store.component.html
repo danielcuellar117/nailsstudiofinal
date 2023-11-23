@@ -1,9 +1,11 @@
 <div class="container">
     <app-aside class="aside"></app-aside>
     <div class="cards">
-      <div *ngFor="let imagen of imagenes">
-        <app-cards class="card" [imagen]="imagen"></app-cards>
-      </div>
+        <app-cards
+          class="card"
+          *ngFor="let imagen of imagenes"
+          [imagen]="imagen"
+        ></app-cards>
     </div>
 <div>
 

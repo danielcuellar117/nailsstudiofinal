@@ -12,11 +12,23 @@ h2 {
 }
 
 .cards {
-    margin: 3rem 1.5rem;
+    margin: 1rem 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     overflow-x: auto;
+}
+
+@media ( min-width: 568px ) {
+  .cards {
+    flex-direction: row;
+  }
+}
+
+@media ( min-width: 568px ) {
+  .cards {
+    gap: 1rem;
+  }
 }
 
