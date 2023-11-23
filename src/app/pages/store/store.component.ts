@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class StoreComponent {
   imagenes = [
-    { url: './assets/images/store/piedras.jpg', titulo: 'Piedras', descripcion: '' },
-    { url: './assets/images/store/piedras2.jpg', titulo: 'Piedras', descripcion: '' },
-    { url: './assets/images/store/piedras3.jpg', titulo: 'Piedras', descripcion: '' },
-    { url: './assets/images/store/piedras4.jpg', titulo: 'Piedras', descripcion: '' },
+    { url: './assets/images/store/piedras.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
+    { url: './assets/images/store/piedras2.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
+    { url: './assets/images/store/piedras3.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
+    { url: './assets/images/store/piedras4.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
     { url: './assets/images/store/pinceles.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
     { url: './assets/images/store/pinceles2.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
     { url: './assets/images/store/pinceles3.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },

@@ -7,10 +7,15 @@
   display: block;
   margin: 0.5rem;
 }
+.img{
+  overflow: hidden;
+}
 
 .card-img {
   height: 320px;
   width: 100vw;
+  transform: scale(1);
+  transition: transform 0.6s;
 }
 
 .card-btn {
@@ -39,6 +44,14 @@
 }
 }
 
+
+.card-btn:hover {
+  background-color: rgb(252, 145, 133);
+}
+.card-img:hover {
+  transform: scale(1.1);
+}
+
 /* .card {
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -63,9 +76,7 @@
     max-height: 230px;
     height: 100%;
   }
-  .card-img:hover {
-    transform: scale(1.1);
-  }
+
 
   .card-info {
     padding: 7px;
@@ -99,9 +110,6 @@
     transition: background-color 0.3s;
   }
 
-  .card-btn:hover {
-    background-color: rgb(252, 145, 133);
-  }
 
   @media (max-width: 700px) {
     .card {

@@ -12,7 +12,7 @@ h2 {
 }
 
 .cards {
-    margin: 1rem 0.5rem;
+    margin: 2rem 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,7 +28,7 @@ h2 {
 
 @media ( min-width: 568px ) {
   .cards {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 
