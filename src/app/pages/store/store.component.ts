@@ -16,8 +16,8 @@ export class StoreComponent {
     { url: './assets/images/store/pinceles3.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
     { url: './assets/images/store/pinceles4.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
     { url: './assets/images/store/esmalte1.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
-    { url: './assets/images/store/esmalte2.jpg', titulo: 'Pinceles', descripcion: 'esmaltes masglo npm' },
-    { url: './assets/images/store/esmalte3.jpg', titulo: 'Pinceles', descripcion: 'esmaltes masglo npm' },
+    { url: './assets/images/store/esmalte2.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
+    { url: './assets/images/store/esmalte3.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
     { url: './assets/images/store/esmalte4.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
   ];
 
