@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ResponseProducts } from '../interfaces/response-products';
 import { environment } from 'src/environments/environment.development';
 import { Product } from '../interfaces/product';
-import { map, tap } from 'rxjs';
+import { catchError, map, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

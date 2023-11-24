@@ -9,6 +9,8 @@
 }
 .img{
   overflow: hidden;
+  height: 255px;
+  width: 245px;
 }
 
 .card-img {
@@ -32,7 +34,7 @@
 @media ( min-width: 568px ) {
   .card-img {
     height: 255px;
-    width: 255px;
+    width: 245px;
   }
   .card {
     width: 50%;

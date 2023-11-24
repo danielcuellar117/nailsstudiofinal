@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
+
+import { HttpClient } from '@angular/common/http';
 import { ProductService } from 'src/app/services/product.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',

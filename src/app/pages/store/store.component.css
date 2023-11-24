@@ -10,6 +10,9 @@ h2 {
     text-align: center;
     margin: 0rem;
 }
+.card{
+  border: 1px solid #e0e0e0;
+}
 
 .cards {
     margin: 2.5rem 0.5rem;

@@ -4,19 +4,23 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MainComponent } from './pages/main/main.component';
-import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
-import { TalleresComponent } from '../pages/talleres/talleres.component';
-import { TallerDashComponent } from './taller-dash/taller-dash.component';
+import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { UpdateProductComponent } from './pages/products/update-product/update-product.component';
+import { NewProductComponent } from './pages/products/new-product/new-product.component';
+
 
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    ProductsComponent,
     ServicesComponent,
     TallerDashComponent,
+    ProductsComponent,
+    UpdateProductComponent,
+    NewProductComponent
 
   ],
   imports: [

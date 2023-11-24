@@ -22,20 +22,22 @@ import { MainComponent } from './auth/pages/main/main.component';
 
 @NgModule({
   declarations: [
+    //pages
     AppComponent,
     SevicesComponent,
     AgendaComponent,
     StoreComponent,
     HomeComponent,
+    TalleresComponent,
+    // componenets
     HeaderComponent,
     FooterComponent,
     CardsComponent,
     BannerTiendaComponent,
     InfoHomeComponent,
     AsideComponent,
-
+    TallerComponent,
     CardTallerComponent,
-
 
   ],
   imports: [
