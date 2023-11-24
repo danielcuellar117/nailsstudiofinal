@@ -24,7 +24,6 @@ import { MainComponent } from './auth/pages/main/main.component';
   declarations: [
     AppComponent,
     SevicesComponent,
-    TalleresComponent,
     AgendaComponent,
     StoreComponent,
     HomeComponent,
@@ -34,15 +33,16 @@ import { MainComponent } from './auth/pages/main/main.component';
     BannerTiendaComponent,
     InfoHomeComponent,
     AsideComponent,
-    TallerComponent,
+
     CardTallerComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AuthModule, 
+    AuthModule,
     HttpClientModule
   ],
   providers: [],
