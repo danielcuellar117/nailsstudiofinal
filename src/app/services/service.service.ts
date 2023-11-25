@@ -6,15 +6,15 @@ import { Injectable } from '@angular/core';
 export class ServiceService {
 
   items = [ 
-    { url: './assets/images/piedras.jpg', titulo: 'Piedras', price: 60, price1: 0 },
-    { url: './assets/images/piedras2.jpg', titulo: 'Piedras', price: 60 },
-    { url: './assets/images/piedras3.jpg', titulo: 'Piedras', price: 60 },
-    { url: './assets/images/piedras4.jpg', titulo: 'Piedras', price: 60 },
-    { url: './assets/images/pinceles.jpg', titulo: 'Pinceles', price: 60 },
-    { url: './assets/images/pinceles2.jpg', titulo: 'Pinceles', price: 60 },
-    { url: './assets/images/pinceles3.jpg', titulo: 'Pinceles', price: 60 },
-    { url: './assets/images/pinceles4.jpg', titulo: 'Pinceles', price: 60 },
-    { url: './assets/images/esmalte1.jpg', titulo: 'esmaltes', price: 60 },
+    { url: './assets/images/piedras.jpg', titulo: 'Piedras', price: 60, price1: 80 },
+    { url: './assets/images/piedras2.jpg', titulo: 'Piedras', price: 60, price1: 80 },
+    { url: './assets/images/piedras3.jpg', titulo: 'Piedras', price: 60, price1: 80 },
+    { url: './assets/images/piedras4.jpg', titulo: 'Piedras', price: 60, price1: 80 },
+    { url: './assets/images/pinceles.jpg', titulo: 'Pinceles', price: 60, price1: 80 },
+    { url: './assets/images/pinceles2.jpg', titulo: 'Pinceles', price: 60, price1: 80 },
+    { url: './assets/images/pinceles3.jpg', titulo: 'Pinceles', price: 60, price1: 80 },
+    { url: './assets/images/pinceles4.jpg', titulo: 'Pinceles', price: 60, price1: 80 },
+    { url: './assets/images/esmalte1.jpg', titulo: 'esmaltes', price: 60, price1: 80 },
  ]
   constructor() {
 
@@ -25,7 +25,7 @@ export class ServiceService {
     console.log(this.items);
    }
 
-   get products() {
+   get services() {
     return { ...this.items }
    }
 }

@@ -7,12 +7,22 @@ import { ServiceService } from 'src/app/services/service.service';
   styleUrls: ['./sevices.component.css']
 })
 export class SevicesComponent {
-  products: any=[];
+  service: any=[
+    { url: './assets/images/piedras.jpg', titulo: 'Piedras', price: 60, price1: 0 },
+    { url: './assets/images/piedras2.jpg', titulo: 'Piedras', price: 60 },
+    { url: './assets/images/piedras3.jpg', titulo: 'Piedras', price: 60 },
+    { url: './assets/images/piedras4.jpg', titulo: 'Piedras', price: 60 },
+    { url: './assets/images/pinceles.jpg', titulo: 'Pinceles', price: 60 },
+    { url: './assets/images/pinceles2.jpg', titulo: 'Pinceles', price: 60 },
+    { url: './assets/images/pinceles3.jpg', titulo: 'Pinceles', price: 60 },
+    { url: './assets/images/pinceles4.jpg', titulo: 'Pinceles', price: 60 },
+    { url: './assets/images/esmalte1.jpg', titulo: 'esmaltes', price: 60 },
+  ];
   
   constructor(
     private serviceService: ServiceService
   ) {}
   onInit(){
-    this.products= this.serviceService.products;
+    //this.service= this.serviceService.service; - para que se llame desde el backend
   }
 }

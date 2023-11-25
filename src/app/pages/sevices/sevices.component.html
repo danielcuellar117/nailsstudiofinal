@@ -1,22 +1,19 @@
-<div *ngIf="products.length > 0; then thereAreProducts else nonProducts"></div>
-<ng-template #thereAreProducts>
-    
+<div *ngIf="service.length > 0; then thereAreservices else nonservices"></div>
+<ng-template #thereAreservices>
+    <div class="service-container">
     <app-card-services
-        *ngFor="let product of products"
-        [product]="product"
+        *ngFor="let service of service"
+        [service]="service"
     >
 
     </app-card-services>
+</div>
 
 </ng-template>
 
-<ng-template #nonProducts>No hya productos registrados</ng-template>
+<ng-template #nonservices>No hya servicios registrados</ng-template>
 
-
-
-
-
-<div class="producto">
+<div class="service">
     <div class="informacion">
         <p class="descripcion">¿Buscas algo más?</p>
         <p class="descripcion">Enviale un mensaje a Nailart.Nataly</p>
