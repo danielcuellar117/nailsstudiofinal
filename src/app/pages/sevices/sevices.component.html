@@ -1,44 +1,25 @@
-<main>
-            
-    <div class="temario-principal">
-      <div class="temario-outter">
-        <div class="temario-inner">
-          <div class="principal">
+<div *ngIf="products.length > 0; then thereAreProducts else nonProducts"></div>
+<ng-template #thereAreProducts>
+    
+    <app-card-services
+        *ngFor="let product of products"
+        [product]="product"
+    >
 
+    </app-card-services>
 
-              <div class="producto" *ngFor="let number of products">
-                  <div class="img-img">
-                      <img class="img-img" src="../../../assets/images/serimagen5.jpg" alt="Producto">
-                  </div>
-                  <div class="content-producto">
-                    <div class="informacion">
-                      <h2 class="titu">Semipermanente Carta da Zucchero</h2>
-                      <p class="descripcion">Desde...</p>
-                      <p class="precio">$ 60.000</p>
-                    </div>
-                    <div class="action">
-                      <button class="inscribirme agregar"><a href="#">agendar</a></button>
-                    </div>
-                  </div>
-                  
-              </div>
-              
+</ng-template>
+
+<ng-template #nonProducts>No hya productos registrados</ng-template>
 
 
 
-      
-  </div>
 
 
 <div class="producto">
-<div class="informacion">
-    <p class="descripcion">¿Buscas algo más?</p>
-    <p class="descripcion">Enviale un mensaje a Nailart.Nataly</p>
-    <button class="inscribirme agregar">Enviar mensaje</button>
+    <div class="informacion">
+        <p class="descripcion">¿Buscas algo más?</p>
+        <p class="descripcion">Enviale un mensaje a Nailart.Nataly</p>
+        <button class="inscribirme agregar">Enviar mensaje</button>
+    </div>
 </div>
-</div>
-            </div>
-          </div>
-        </div>
-
-    </main>

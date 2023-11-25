@@ -19,6 +19,7 @@ import { CardTallerComponent } from './components/card-taller/card-taller.compon
 import { AuthModule } from './auth/auth.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './auth/pages/main/main.component';
+import { CardServicesComponent } from './components/card-services/card-services.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { MainComponent } from './auth/pages/main/main.component';
     AsideComponent,
     TallerComponent,
     CardTallerComponent,
-
+    CardServicesComponent
   ],
   imports: [
     BrowserModule,

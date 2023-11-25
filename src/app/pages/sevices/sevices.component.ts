@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
   selector: 'app-sevices',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./sevices.component.css']
 })
 export class SevicesComponent {
-  products = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+  products: any=[];
+  
+  constructor(
+    private serviceService: ServiceService
+  ) {}
+  onInit(){
+    this.products= this.serviceService.products;
+  }
 }
