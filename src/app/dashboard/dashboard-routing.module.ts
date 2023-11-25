@@ -4,6 +4,9 @@ import { verifyAuthGuard } from '../guards/verify-auth.guard';
 import { MainComponent } from './pages/main/main.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { NewProductComponent } from './pages/products/new-product/new-product.component';
+import { UpdateProductComponent } from './pages/products/update-product/update-product.component';
 
 const routes: Routes = [
   {
@@ -11,11 +14,10 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       { path: 'servicios', component: ServicesComponent },
-      // { path: 'products', component: ProductsComponent },
       { path: 'talleres', component: TallerDashComponent },
-
-      // { path: 'products/new', component: NewProductComponent },
-      // { path: 'products/update/:id', component: UpdateProductComponent }
+      { path: 'products', component: ProductsComponent },
+      { path: 'products/new', component: NewProductComponent },
+      { path: 'products/update/:id', component: UpdateProductComponent }
     ],
     canActivate: [ verifyAuthGuard ]
   }

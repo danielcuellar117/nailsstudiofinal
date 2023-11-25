@@ -1,6 +1,22 @@
-<h2> este es el main del dashboard</h2>
-<br>
-<hr>
+<ul class="menu-dashboard">
+  <li class="list-dashboard">
+      <a class="link-dashboard" routerLink="/dashboard/products">Mis productos</a>
+  </li>
+  <li class="list-dashboard">
+      <a class="link-dashboard" routerLink="/dashboard/products/new">Nuevo Producto</a>
+  </li>
+  <li class="list-dashboard">
+    <a class="link-dashboard" routerLink="/dashboard/products/update/:id">actualizar producto</a>
+</li>
+  <li class="list-dashboard">
+    <a class="link-dashboard" routerLink="/dashboard/servicios">servicioso</a>
+</li>
+<li class="list-dashboard">
+  <a class="link-dashboard" routerLink="/dashboard/talleres">talleres</a>
+</li>
+  <li class="list-dashboard">
+      <a *ngIf="user.role == 'admin'" routerLink="/no-existe">No existe</a>
+  </li>
+</ul>
 
 <router-outlet></router-outlet>
-
