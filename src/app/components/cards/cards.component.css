@@ -1,42 +1,97 @@
-.card {
+/* .card {
+  border: 1px dotted blue;
+  width: 100vw;
+} */
+
+.card-price {
+  display: block;
+  margin: 0.5rem;
+}
+.img{
+  overflow: hidden;
+  height: 255px;
+  width: 245px;
+}
+
+.card-img {
+  height: 320px;
+  width: 100vw;
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+
+.card-btn {
+  background-color: rgb(255, 168, 158);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+@media ( min-width: 568px ) {
+  .card-img {
+    height: 255px;
+    width: 245px;
+  }
+  .card {
+    width: 50%;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
+
+
+.card-btn:hover {
+  background-color: rgb(252, 145, 133);
+}
+.card-img:hover {
+  transform: scale(1.1);
+}
+
+/* .card {
     border: 1px solid #e0e0e0;
-    /* border-radius: 8px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.5s;
     width: 100%;
     max-width: 220px;
-    max-height: 400px;
-    height: 100%;
     overflow: hidden;
-    margin: 3rem 1.5rem;
+  }
+  .img {
+    max-width: 340px;
+    max-height: 230px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
   }
 
   .card-img{
     transform: scale(1);
     transition: transform 0.6s;
-    width: 100%;
-    max-width: 360px;
-    max-height: 250px;
+    max-width: 340px;
+    max-height: 230px;
     height: 100%;
-    /* border-radius: 8px; */
-  }
-  .card-img:hover {
-    transform: scale(1.1);
   }
 
+
   .card-info {
-    padding: 8px;
+    padding: 7px;
   }
   h3{
-    margin: .4rem;
+    margin: .2rem;
   }
 
   .card-p {
     color: #666;
-    font-size: 1em;
+    font-size: .8rem;
     letter-spacing: 2px;
-    margin: 8px 0;
+    margin: 5px 0;
   }
 
   .card-price {
@@ -57,9 +112,6 @@
     transition: background-color 0.3s;
   }
 
-  .card-btn:hover {
-    background-color: rgb(253, 162, 152);
-  }
 
   @media (max-width: 700px) {
     .card {
@@ -88,4 +140,4 @@
   }
 
 
-
+ */

@@ -21,22 +21,18 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import( './auth/auth.module' ).then( module => module.AuthModule )
   },
-  {path: "", component: HomeComponent},
+  {
+    path: 'dashboard',
+    loadChildren: () => import( './dashboard/dashboard.module' ).then( module => module.DashboardModule )
+  },
+  // {path: "", component: HomeComponent},
+  {path: "home", component: HomeComponent},
   {path: "servicios", component: SevicesComponent},
   {path: "agenda-una-cita", component: AgendaComponent},
   {path: "tienda", component: StoreComponent},
   {path: "talleres", component: TalleresComponent},
-  {path: "**", redirectTo: ""},
-  /** Ruta a los componentes del Modulo Dashboard */
-  // {
-  //   path: 'dashboard',
-  //   loadChildren: () => import( './dashboard/dashboard.module' ).then( module => module.DashboardModule )
-  // },
-  // /** Ruta para la redireccion de rutas desconocidas */
-  // {
-  //   path: '**',
-  //   redirectTo: 'auth'
-  // }
+  {path: "**", redirectTo: "home"},
+
 ];
 
 

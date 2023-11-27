@@ -23,12 +23,14 @@ import { CardServicesComponent } from './components/card-services/card-services.
 
 @NgModule({
   declarations: [
+    //pages
     AppComponent,
     SevicesComponent,
-    TalleresComponent,
     AgendaComponent,
     StoreComponent,
     HomeComponent,
+    TalleresComponent,
+    // componenets
     HeaderComponent,
     FooterComponent,
     CardsComponent,
@@ -43,7 +45,7 @@ import { CardServicesComponent } from './components/card-services/card-services.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AuthModule, 
+    AuthModule,
     HttpClientModule
   ],
   providers: [],
