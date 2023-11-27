@@ -10,13 +10,28 @@ h2 {
     text-align: center;
     margin: 0rem;
 }
+.card{
+  border: 1px solid #e0e0e0;
+}
 
 .cards {
+    margin: 2.5rem 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
-    margin: 1rem;
+    gap: 2rem;
     overflow-x: auto;
+}
+
+@media ( min-width: 568px ) {
+  .cards {
+    flex-direction: row;
+  }
+}
+
+@media ( min-width: 568px ) {
+  .cards {
+    gap: 1.5rem;
+  }
 }
 

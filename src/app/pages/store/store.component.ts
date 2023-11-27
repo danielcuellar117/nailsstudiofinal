@@ -7,15 +7,18 @@ import { Component } from '@angular/core';
 })
 export class StoreComponent {
   imagenes = [
-    { url: './assets/images/piedras.jpg', titulo: 'Piedras', descripcion: 'Descripción 1' },
-    { url: './assets/images/piedras2.jpg', titulo: 'Piedras', descripcion: 'Descripción 2' },
-    { url: './assets/images/piedras3.jpg', titulo: 'Piedras', descripcion: 'Descripción 3' },
-    { url: './assets/images/piedras4.jpg', titulo: 'Piedras', descripcion: 'Descripción 1' },
-    { url: './assets/images/pinceles.jpg', titulo: 'Pinceles', descripcion: 'Descripción 2' },
-    { url: './assets/images/pinceles2.jpg', titulo: 'Pinceles', descripcion: 'Descripción 3' },
-    { url: './assets/images/pinceles3.jpg', titulo: 'Pinceles', descripcion: 'Descripción 1' },
-    { url: './assets/images/pinceles4.jpg', titulo: 'Pinceles', descripcion: 'Descripción 2' },
-    { url: './assets/images/esmalte1.jpg', titulo: 'esmaltes', descripcion: 'Descripción 3' },
+    { url: './assets/images/store/piedras.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
+    { url: './assets/images/store/piedras2.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
+    { url: './assets/images/store/piedras3.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
+    { url: './assets/images/store/piedras4.jpg', titulo: 'Piedras', descripcion: 'piedraas' },
+    { url: './assets/images/store/pinceles.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
+    { url: './assets/images/store/pinceles2.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
+    { url: './assets/images/store/pinceles3.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
+    { url: './assets/images/store/pinceles4.jpg', titulo: 'Pinceles', descripcion: 'pinceles doble punta' },
+    { url: './assets/images/store/esmalte1.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
+    { url: './assets/images/store/esmalte2.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
+    { url: './assets/images/store/esmalte3.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
+    { url: './assets/images/store/esmalte4.jpg', titulo: 'esmaltes', descripcion: 'esmaltes masglo npm' },
   ];
 
 }

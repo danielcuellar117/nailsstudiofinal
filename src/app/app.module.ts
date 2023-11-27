@@ -22,12 +22,15 @@ import { MainComponent } from './auth/pages/main/main.component';
 
 @NgModule({
   declarations: [
+    //pages
     AppComponent,
     ServicesComponent,
     TalleresComponent,
     AgendaComponent,
     StoreComponent,
     HomeComponent,
+    TalleresComponent,
+    // componenets
     HeaderComponent,
     FooterComponent,
     CardsComponent,
@@ -42,7 +45,7 @@ import { MainComponent } from './auth/pages/main/main.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AuthModule, 
+    AuthModule,
     HttpClientModule
   ],
   providers: [],
