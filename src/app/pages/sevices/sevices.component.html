@@ -1,44 +1,35 @@
-<main>
-            
-    <div class="temario-principal">
-      <div class="temario-outter">
-        <div class="temario-inner">
-          <div class="principal">
-
-
-              <div class="producto" *ngFor="let number of products">
-                  <div class="img-img">
-                      <img class="img-img" src="../../../assets/images/serimagen5.jpg" alt="Producto">
-                  </div>
-                  <div class="content-producto">
-                    <div class="informacion">
-                      <h2 class="titu">Semipermanente Carta da Zucchero</h2>
-                      <p class="descripcion">Desde...</p>
-                      <p class="precio">$ 60.000</p>
-                    </div>
-                    <div class="action">
-                      <button class="inscribirme agregar"><a href="#">agendar</a></button>
-                    </div>
-                  </div>
-                  
-              </div>
-              
-
-
-
-      
-  </div>
-
-
-<div class="producto">
-<div class="informacion">
-    <p class="descripcion">¿Buscas algo más?</p>
-    <p class="descripcion">Enviale un mensaje a Nailart.Nataly</p>
-    <button class="inscribirme agregar">Enviar mensaje</button>
-</div>
-</div>
+<div class="servicio-principal">
+  <div class="servicio-outter">
+    <div class="servicio-inner">
+      <div class="principal">
+        <!-- Lista de productos -->
+        <div class="Service" *ngFor="let number of services">
+          <div class="img-img">
+            <img class="img-img" src="../../../assets/images/serimagen5.jpg" alt="Producto">
+          </div>
+          <div class="content-producto">
+            <!-- Información del producto -->
+            <div class="informacion">
+              <h2 class="titu">Semipermanente Carta da Zucchero</h2>
+              <p class="descripcion">Desde...</p>
+              <p class="precio">$ 60.000</p>
+            </div>
+            <!-- Acción del producto -->
+            <div class="action">
+              <button class="inscribirme agregar"><a routerLink="/agenda-una-cita">agendar</a></button>
             </div>
           </div>
         </div>
-
-    </main>
+        
+        <!-- Enviar Mensaje -->
+        <div class="producto">
+          <div class="informacion">
+            <p class="descripcion">¿Buscas algo más?</p>
+            <p class="descripcion">Envíale un mensaje a Nailart.Nataly</p>
+            <button class="inscribirme agregar">Enviar mensaje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

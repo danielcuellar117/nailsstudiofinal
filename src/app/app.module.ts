@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
-import { SevicesComponent } from './pages/sevices/sevices.component';
+import { ServicesComponent } from './pages/sevices/sevices.component';
 import { TalleresComponent } from './pages/talleres/talleres.component';
 import { AgendaComponent } from './pages/agenda/agenda.component';
 import { StoreComponent } from './pages/store/store.component';
@@ -23,7 +23,7 @@ import { MainComponent } from './auth/pages/main/main.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SevicesComponent,
+    ServicesComponent,
     TalleresComponent,
     AgendaComponent,
     StoreComponent,
@@ -36,7 +36,7 @@ import { MainComponent } from './auth/pages/main/main.component';
     AsideComponent,
     TallerComponent,
     CardTallerComponent,
-
+    
   ],
   imports: [
     BrowserModule,
