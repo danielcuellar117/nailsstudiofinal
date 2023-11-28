@@ -1,5 +1,5 @@
 
-.producto {
+.service {
     margin: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -76,7 +76,7 @@ button {
     color: blueviolet;
 }
 
-.content-producto {
+.content-service {
     display: flex;
     align-items: center;
 }
@@ -319,7 +319,7 @@ body{
     display: flex;
     justify-content: center;
     padding: 1rem;
-    background-color: #f27e938e;
+    background-color: transparent;
 }
 .temario-title{
     display: flex;
@@ -347,13 +347,13 @@ body{
 
 /** Dispositivos mas grandes */
 @media ( min-width: 567px ) {
-    .producto {
+    .service {
         flex-basis: 46%;
     }
 }
 
 @media ( min-width: 992px ) {
-    .producto {
+    .service {
         flex-basis: 30%;
     }
 }
