@@ -10,18 +10,11 @@ import { ValidateFormsService } from 'src/app/services/validate-forms.service';
   styleUrls: ['./new-service.component.css']
 })
 export class NewServiceComponent {
-  categories = [
-    { name: 'Tecnologia', value: 'tecnologia' },
-    { name: 'Hogar', value: 'hogar' },
-    { name: 'Verduras', value: 'verduras' },
-    { name: 'Frutas', value: 'frutas' }
-  ];
+ 
   serviceForm: FormGroup = this.formBuilder.group({
     name: [ '', [ Validators.required, Validators.minLength( 3 ) ] ],
     price: [ '', [ Validators.required, this.validateForm.validatePrice ] ],
-    quantity: [ '', [ Validators.required, this.validateForm.validateQuantity ] ],
     urlImage: [ '', this.validateForm.validateNormalUrl ],
-    category: [ '' ],
     description: [ '', [ this.validateForm.validateDescription ] ]
   });
 
