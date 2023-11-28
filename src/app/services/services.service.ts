@@ -21,17 +21,21 @@ export class ServiceService {
   constructor( private http: HttpClient ) { 
     const token = localStorage.getItem( 'token' );
     this.token = token ? token : '';
-    this.headers = new HttpHeaders().set( 'X-Token', this.token );
+    this.headers = new HttpHeaders().set( 'x-token', this.token );
   }
 
   getAllServices() {
     
-    return this.http.get<ResponseServices>( `${ this.BASE_URL }/Services` );
+    return this.http.get<ResponseServices>( `${ this.BASE_URL }/services`, { headers: this.headers }  )
+      .pipe(
+        tap( response => console.log( response )),
+        map( response => response )
+      );
   }
 
   getServiceById( id: string ) {
 
-    return this.http.get<ResponseServices>( `${ this.BASE_URL }/Services/${ id }`)
+    return this.http.get<ResponseServices>( `${ this.BASE_URL }/services/${ id }`)
       .pipe(
         tap( data => {
           console.log( data );
@@ -45,7 +49,7 @@ export class ServiceService {
   createService( data: Service ) {
 
     return this.http.post<ResponseServices>( 
-      `${ this.BASE_URL }/Services`, 
+      `${ this.BASE_URL }/services`, 
       data, 
       { headers: this.headers } 
     );
@@ -54,7 +58,7 @@ export class ServiceService {
   deleteService( id: string ) {
 
     return this.http.delete(
-      `${ this.BASE_URL }/Services/${ id }`,
+      `${ this.BASE_URL }/services/${ id }`,
       { headers: this.headers }
     );
   }

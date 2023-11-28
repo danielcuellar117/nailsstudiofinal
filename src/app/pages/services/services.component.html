@@ -1,0 +1,23 @@
+<pre>{{ services | json }}</pre>
+
+<div *ngIf="services.length > 0; then thereAreservices else nonservices"></div>
+<ng-template #thereAreservices>
+    <div class="service-container">
+    <app-card-services
+        *ngFor="let service of services"
+        [service]="service"
+    >
+    </app-card-services>
+</div>
+
+</ng-template>
+
+<ng-template #nonservices>No hay servicios registrados</ng-template>
+
+<div class="service">
+    <div class="informacion">
+        <p class="descripcion">¿Buscas algo más?</p>
+        <p class="descripcion">Enviale un mensaje a Nailart.Nataly</p>
+        <button class="inscribirme agregar">Enviar mensaje</button>
+    </div>
+</div>
