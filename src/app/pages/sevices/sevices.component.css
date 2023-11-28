@@ -1,7 +1,13 @@
-/* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-/* Estilos generales del producto */
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color:#f27e938e;
+    justify-content: space-around;
+
+
+}
 .service {
     display: flex;
     flex-basis: 100%;
@@ -31,6 +37,7 @@
 }
 
 /* Estilos para la información del producto */
+
 .informacion {
     flex-grow: 1;
     padding: 10px;
@@ -47,6 +54,7 @@
 }
 
 /* Estilos para la descripción del producto */
+
 .descripcion {
     font-size: 14px;
     margin: 5px 0;
@@ -69,6 +77,9 @@
 }
 
 /* Estilos para el botón de inscribirse */
+
+
+
 .inscribirme.agregar {
     margin: 0;
 }
@@ -117,13 +128,27 @@
 
 /* Media Queries */
 @media (min-width: 567px) {
-    .producto {
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+/** Dispositivos mas grandes */
+@media ( min-width: 567px ) {
+    .service {
         flex-basis: 46%;
     }
 }
 
-@media (min-width: 992px) {
-    .producto {
+
+@media ( min-width: 992px ) {
+    .service {
         flex-basis: 30%;
     }
-}
+}}

@@ -1,20 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Service } from 'src/app/interfaces/service';
+import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
-import { ServiceService } from 'src/app/services/services.service';
-import Swal from 'sweetalert2'
-import { Router } from '@angular/router';
-
-@Component({
-  selector: 'app-Services',
-  templateUrl: './Sevices.component.html',
-  styleUrls: ['./Sevices.component.css']
+@Injectable({
+  providedIn: 'root'
 })
+export class ServiceService {
 
-
-export class SevicesComponent {
-  service: any=[ 
+  items = [ //lo que hago aquí no afecta nada
     { url: './assets/images/serimagen1.jpg', titulo: 'servicio', price: 60, price1: 80 },
     { url: './assets/images/serimagen2.jpg', titulo: 'servicio', price: 60, price1: 80 },
     { url: './assets/images/serimagen3.jpg', titulo: 'servicio', price: 60, price1: 80 },
@@ -23,12 +14,17 @@ export class SevicesComponent {
     { url: './assets/images/serimagen6.jpg', titulo: 'servicio', price: 60, price1: 80 },
     { url: './assets/images/serimagen7.jpg', titulo: 'servicio', price: 60, price1: 80 },
     { url: './assets/images/serimagen8.jpg', titulo: 'servicio', price: 60, price1: 80 },
- ];
-  
-  constructor(
-    private serviceService: ServiceService
-  ) {}
-  onInit(){
-    //this.service= this.serviceService.service; - para que se llame desde el backend
-  }
+ ]
+  constructor() {
+
+    this.items = this.items.map( item => {
+      item.price1=item.price*2;
+      return item
+    })
+    console.log(this.items);
+   }
+
+   get services() {
+    return { ...this.items }
+   }
 }
