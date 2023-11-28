@@ -32,6 +32,9 @@
   display: flex;
   padding: .3rem;
 }
+.price{
+  text-decoration:line-through;
+}
 .price-off{
   margin: 0 .6rem;
 }
