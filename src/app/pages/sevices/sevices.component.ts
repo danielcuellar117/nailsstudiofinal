@@ -11,8 +11,80 @@ import { Router } from '@angular/router';
   templateUrl: './Sevices.component.html',
   styleUrls: ['./Sevices.component.css']
 })
+export class ServicesComponent implements OnInit {
+  // Atributos: Son la forma en que los datos van a estar disponibles para desplegarse en la View Componente
+  Services!: Service[];
+
+  // Constructor: public, private, proteted
+  constructor( 
+    private http: HttpClient,
+    private ServiceService: ServiceService,
+    private router: Router
+  ) {}
+  
+  ngOnInit(): void {
+    this.loadData();
+  }
+
+  loadData() {
+    this.ServiceService.getAllServices().subscribe( data => {
+      console.log( data );    // { ok: true, data: [] }
+      this.Services = data.data;
+    });
+  }
 
 
+  // Ciclos de vida
+
+  // Metodos
+  update( id: string ) {
+    this.router.navigateByUrl( `/dashboard/Services/update/${ id }` );
+  }
+
+  remove( id: string ) {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+        cancelButton: "btn btn-danger"
+      },
+      buttonsStyling: false
+    });
+    swalWithBootstrapButtons.fire({
+      title: "Estas seguro?",
+      text: "Esta accion no se puede revertir!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Si, Eliminalo",
+      cancelButtonText: "No, cancelar!",
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire({
+          title: "Eliminado!",
+          text: "Tu Servicio ha sido eliminado.",
+          icon: "success"
+        });
+
+          this.ServiceService.deleteService( id ).subscribe( data => {
+            console.log( data );
+
+            this.loadData();
+          });
+
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire({
+          title: "Cancelado",
+          icon: "error"
+        });
+      }
+    });
+
+  }
+
+}
 export class SevicesComponent {
   service: any=[ 
     { url: './assets/images/serimagen1.jpg', titulo: 'servicio', price: 60, price1: 80 },
