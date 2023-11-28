@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
-import { SevicesComponent } from './pages/sevices/sevices.component';
 import { TalleresComponent } from './pages/talleres/talleres.component';
 import { AgendaComponent } from './pages/agenda/agenda.component';
 import { StoreComponent } from './pages/store/store.component';
@@ -20,12 +19,13 @@ import { AuthModule } from './auth/auth.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './auth/pages/main/main.component';
 import { CardServicesComponent } from './components/card-services/card-services.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 @NgModule({
   declarations: [
     //pages
     AppComponent,
-    SevicesComponent,
+    TalleresComponent,
     AgendaComponent,
     StoreComponent,
     HomeComponent,
@@ -39,7 +39,8 @@ import { CardServicesComponent } from './components/card-services/card-services.
     AsideComponent,
     TallerComponent,
     CardTallerComponent,
-    CardServicesComponent
+    CardServicesComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

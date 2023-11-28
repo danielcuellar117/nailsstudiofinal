@@ -1,8 +1,10 @@
-<div *ngIf="service.length > 0; then thereAreservices else nonservices"></div>
+<pre>{{ services | json }}</pre>
+
+<div *ngIf="services.length > 0; then thereAreservices else nonservices"></div>
 <ng-template #thereAreservices>
     <div class="service-container">
     <app-card-services
-        *ngFor="let service of service"
+        *ngFor="let service of services"
         [service]="service"
     >
     </app-card-services>

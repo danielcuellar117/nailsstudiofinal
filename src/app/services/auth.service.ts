@@ -60,7 +60,7 @@ export class AuthService {
   verifyToken() {
     const token = localStorage.getItem( 'token' ) || '';
     const URL = `${ this.BASE_URL }/auth/renew-token`;
-    const headers = new HttpHeaders().set( 'X-Token', token );
+    const headers = new HttpHeaders().set( 'x-token', token );
 
     return this.http.get<ResponseAuth>( URL, { headers } )
       .pipe(

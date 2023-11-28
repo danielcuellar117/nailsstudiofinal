@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SevicesComponent } from './pages/sevices/sevices.component';
+import { ServicesComponent } from './pages/services/services.component';
 import { AgendaComponent } from './pages/agenda/agenda.component';
 import { StoreComponent } from './pages/store/store.component';
 import { TalleresComponent } from './pages/talleres/talleres.component';
@@ -21,13 +21,14 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import( './auth/auth.module' ).then( module => module.AuthModule )
   },
+  {path: "", component: HomeComponent},
+  {path: "servicios", component: ServicesComponent},
   {
     path: 'dashboard',
     loadChildren: () => import( './dashboard/dashboard.module' ).then( module => module.DashboardModule )
   },
   // {path: "", component: HomeComponent},
   {path: "home", component: HomeComponent},
-  {path: "servicios", component: SevicesComponent},
   {path: "agenda-una-cita", component: AgendaComponent},
   {path: "tienda", component: StoreComponent},
   {path: "talleres", component: TalleresComponent},
