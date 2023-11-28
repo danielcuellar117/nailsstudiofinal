@@ -1,5 +1,4 @@
-<p>new-service works!</p>
-<h2>Formulario Nuevo serviceo</h2>
+<h2>Formulario de Nuevo Servicio</h2>
 <form
   class="form form-service"
   [formGroup]="serviceForm"
@@ -9,13 +8,13 @@
   <h2>service</h2>
   <p class=>Registra nuevos servicios. Diligencia cada uno de los campos según sean requeridos.</p>
   <div class="field">
-    <label for="name">Nombre*</label>
+    <label for="name">Titulo del servicio</label>
     <input
       id="name"
       class="input-field"
       type="text"
       formControlName="name"
-      placeholder="Nombre del serviceo"
+      placeholder="Titulo del servicio"
       minlength="3"
     />
     <div
@@ -23,55 +22,35 @@
       class="error-message"
     >
       <small *ngIf="serviceForm.get( 'name' )?.errors?.[ 'required' ]">
-        Nombre de serviceo es requerido.
+        Nombre de servicio es requerido.
       </small>
       <small *ngIf="serviceForm.get( 'name' )?.errors?.[ 'minlength' ]">
-        Nombre de serviceo debe tener al menos 3 caracteres.
+        Nombre de servicio debe tener al menos 3 caracteres.
       </small>
     </div>
   </div>
   <div class="field">
-    <label for="price">Precio</label>
+    <label for="price">Precio del servicio</label>
     <input
       id="price"
       class="input-field"
       type="number"
       formControlName="price"
-      placeholder="Precio del serviceo"
+      placeholder="Precio del servicio"
     />
     <div
       *ngIf="serviceForm.get( 'price' )?.invalid && ( serviceForm.get( 'price' )?.dirty || serviceForm.get( 'price' )?.touched )"
       class="error-message"
     >
       <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'required' ]">
-        Precio del serviceo es requerido.
+        Precio del servicio es requerido.
       </small>
       <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
         El precio debe ser mayor o igual a cero
       </small>
     </div>
   </div>
-  <div class="field">
-    <label for="quantity">Cantidad*</label>
-    <input
-      id="quantity"
-      class="input-field"
-      type="number"
-      formControlName="quantity"
-      placeholder="Cantidad disponible del serviceo"
-    />
-    <div
-      *ngIf="serviceForm.get( 'quantity' )?.invalid && ( serviceForm.get( 'quantity' )?.dirty || serviceForm.get( 'quantity' )?.touched )"
-      class="error-message"
-    >
-      <small *ngIf="serviceForm.get( 'quantity' )?.errors?.[ 'required' ]">
-        Cantidad del serviceo es requerido.
-      </small>
-      <small *ngIf="serviceForm.get( 'quantity' )?.errors?.[ 'invalidQuantity' ]">
-        El precio debe ser mayor a cero
-      </small>
-    </div>
-  </div>
+
 
   <div class="field">
     <label for="image">Imagen del serviceo*</label>
@@ -89,20 +68,6 @@
         La URL no tiene formato de imagen permitido
       </small>
     </div>
-  </div>
-  <div class="field">
-    <label for="category">Categoria</label>
-    <select
-      id="category"
-      class="input-field"
-      formControlName="category"
-    >
-      <option value="" selected>Seleccione...</option>
-      <option
-        *ngFor="let category of categories"
-        [value]="category.value"
-      >{{ category.name }}</option>
-    </select>
   </div>
   <div class="field">
     <label for="description">Descripción</label>
