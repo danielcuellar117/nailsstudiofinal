@@ -1,26 +1,35 @@
-<ul class="menu-dashboard">
-  <ul class="list-dashboard"> PRODUCTS
-      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products">Mis productos</a></li>
-      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products/new">Nuevo Producto</a></li>
-      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products/update/:id">actualizar producto</a></li>
-  </ul>
+<ul class="menu">
+  <li class="list-item"> PRODUCTOS
+    <ul class="list-dashboard">
+        <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products">Mis productos</a></li>
+        <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products/new">Nuevo Producto</a></li>
+        <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products/update/:id">Actualizar producto</a></li>
+    </ul>
+  </li>
 
-  <ul class="list-dashboard"> SERVICIOS
-    <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios"> mis servicios</a></li>
-    <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios">nuevo servicio</a></li>
-    <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios">actualizar servicio</a></li>
-  </ul>
+  <li class="list-item"> SERVICIOS
+    <ul class="list-dashboard">
+      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios"> Mis servicios</a></li>
+      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios">Nuevo servicio</a></li>
+      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios">Actualizar servicio</a></li>
+    </ul>
+  </li>
 
-  <ul class="list-dashboard"> TALLERES
-    <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">mis talleres</a></li>
-    <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">nuevo taller</a></li>
-    <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">actualizar taller</a></li>
-  </ul>
+  <li class="list-item"> TALLERES
+    <ul class="list-dashboard">
+      <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">Nis talleres</a></li>
+      <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">Nuevo taller</a></li>
+      <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">Actualizar taller</a></li>
+    </ul>
+  </li>
 
 
   <li class="list-dashboard">
       <a *ngIf="user.role == 'admin'" routerLink="/no-existe">No existe</a>
   </li>
 </ul>
+
+
+
 
 <router-outlet></router-outlet>
