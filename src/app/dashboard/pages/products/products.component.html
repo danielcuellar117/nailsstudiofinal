@@ -8,7 +8,7 @@
 
   <table>
     <thead>
-      <tr>
+      <tr class="tri">
         <th>Preview</th>
         <th scope="col">Name and Description</th>
         <th scope="col">Category</th>
@@ -33,13 +33,13 @@
         <td>{{ product.price! * product.quantity! | currency }}</td>
         <td>
           <button
-            class="btn btn-primary"
+            class="btn btn-update"
             (click)="update( product._id )"
           >
             Edit
           </button>
           <button
-            class="btn btn-primary"
+            class="btn btn-delete"
             (click)="remove( product._id )"
           >
             Delete

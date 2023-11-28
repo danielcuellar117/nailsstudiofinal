@@ -5,12 +5,12 @@
           <div class="principal">
             <div class="service">
               <div class="img-img">
-                <img class="img-img" [src]="service.url" alt="service">
+                <img class="img-img" [src]="service.urlImage" alt="service">
               </div>
               <div class="content-service">
                 <div class="informacion">
-                  <h2 class="titu">{{service.titulo}}</h2>
-                  <p class="descripcion">Solo hoy...</p>
+                  <h2 class="titu">{{service.name}}</h2>
+                  <p class="descripcion">{{ service.description }}</p>
                   <p class="precio"> $ {{service.price}}</p>
                   <p class="precio-antes"> $ {{service.price1}}</p>
                 </div>

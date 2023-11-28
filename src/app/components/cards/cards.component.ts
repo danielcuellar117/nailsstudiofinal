@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
+import { ResponseProducts } from 'src/app/interfaces/response-products';
 
 @Component({
   selector: 'app-cards',
@@ -6,6 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent {
-  @Input() imagen: any;
+  @Input() products: any;
 
 }
