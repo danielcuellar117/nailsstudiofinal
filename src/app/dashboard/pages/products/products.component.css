@@ -1,48 +1,82 @@
-thead,
-tfoot {
-  background-color: rgb( 236, 68, 68 );
-  color: #fff;
+/* Estilos para la tabla de productos */
+h2 {
+  text-align: center;
+  color: #2c3e50;
 }
 
-tbody {
-  background-color: #fff;
-}
-
-caption {
-  padding: 10px;
-  caption-side: bottom;
+h3 {
+  text-align: center;
+  color:purple;
+  font-size: 1.2rem;
 }
 
 table {
-  border-collapse: collapse;
-  border: 2px solid rgb(200, 200, 200);
-  letter-spacing: 1px;
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  max-width: 90%;
   width: 100%;
-  margin: 0 auto;
+  border-collapse: collapse;
 }
 
-td,
-th {
-  border: 1px solid rgb(190, 190, 190);
-  padding: 5px 10px;
+thead {
+  background-color: pink;
+  color: #353535;
+}
+th, td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
 }
 
-td {
-  text-align: center;
+tbody tr:hover {
+  background-color: #ecf0f1;
 }
 
 .product__image {
-  border: 1px solid rgb( 200, 200, 200 );
-  box-sizing: border-box;
+  max-width: 130px;
+  width: 100%;
+  max-height: 110px;
+  border-radius: 4px;
+}
 
-  max-width: 100px;
-  width: 70px;
-  max-height: 100px;
-  height: 70px;
+.product__description {
+  color: black;
+  font-size: 1rem;
+}
 
-  border-radius: .2rem;
-  object-fit: cover;
+.btn {
+  margin: 0 5px;
+  color: #fff;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-update{
+  background-color: #2ecc71;
+  transition: background-color 0.3s ease;
+}
+.btn-delete{
+  background: rgb(255, 16, 16);
+  transition: background-color 0.3s ease;
+}
+/* hover */
+.btn-delete:hover {
+  background-color: rgb(206, 0, 0);
+}
+.btn-update:hover {
+  background-color: #27ae60;
+}
+
+tfoot {
+  background-color: pink;
+  color: #353535;
+}
+
+/* Estilos para la fila de totales */
+tfoot th {
+  padding: 20px;
+  text-align: right;
+}
+
+/* Estilos para las acciones en la fila de totales */
+tfoot .btn {
+  margin: 0 5px;
 }

@@ -1,12 +1,12 @@
 
   <div class="img">
-    <img class="card-img image-responsive" [src]="imagen.url" alt="Nombre del producto">
+    <img class="card-img image-responsive" [src]="products.urlImage" alt="Nombre del producto">
   </div>
-  <div class="card-info" id={{imagen.id}}>
-    <h3>{{ imagen.titulo }}</h3>
-    <p class="card-p">{{ imagen.descripcion }}</p>
+  <div class="card-info">
+    <h3>{{ products.name }}</h3>
+    <p class="card-p">{{ products.description }}</p>
     <div class="card-footer">
-      <span class="card-price">$ 25.000 </span>
+      <span class="card-price">{{ products.price }}</span>
       <button class="card-btn">Comprar</button>
     </div>
   </div>
