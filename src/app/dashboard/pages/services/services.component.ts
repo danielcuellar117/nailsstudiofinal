@@ -23,7 +23,7 @@ export class ServicesComponent {
     public serviceService:ServiceService
     ) {}
 
-    ngOninit(): void{
+    ngOnInit(): void{
       this.loadData();
     }
 
