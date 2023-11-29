@@ -1,5 +1,6 @@
 <nav class="navegacion">
   <ul class="menu">
+      <li><a class="link-dashboard" routerLink="/dashboard">Dashboard</a></li>
       <li class="menu-list"><a class="link-dashboard">Productos</a>
           <ul class="submenu">
               <li><a class="link-dashboard" routerLink="/dashboard/products">Mis productos</a></li>
@@ -7,19 +8,18 @@
 
           </ul>
       </li>
-      <li class="menu-list"><a class="link-dashboard" routerLink="/dashboard/servicios">Servicios</a>
+      <li class="menu-list"><a class="link-dashboard">Servicios</a>
           <ul class="submenu">
               <li><a class="link-dashboard" routerLink="/dashboard/servicios">Mis servicios</a></li>
               <li><a class="link-dashboard" routerLink="/dashboard/servicios/new-service"> servicio nuevo</a></li>
           </ul>
       </li>
-      <li class="menu-list"><a class="link-dashboard" routerLink="/dashboard/servicios">Talleres</a>
+      <li class="menu-list"><a class="link-dashboard">Talleres</a>
           <ul class="submenu">
               <li><a class="link-dashboard" routerLink="/dashboard/talleres">Mis Talleres</a></li>
               <li><a class="link-dashboard" routerLink="/dashboard/talleres/new">Taller nuevo</a></li>
           </ul>
       </li>
-      <li><a class="link-dashboard" routerLink="/dashboard">Dashboard</a></li>
       <li class="list-dashboard">
         <a *ngIf="user.role == 'admin'" routerLink="/no-existe">No existe</a>
       </li>
