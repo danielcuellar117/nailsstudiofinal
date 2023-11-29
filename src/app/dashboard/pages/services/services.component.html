@@ -1,5 +1,5 @@
 <h2>Lista de servicios</h2>
-
+<h1>Privado</h1>
 <ng-container *ngIf="services && services.length > 0; then serviceList; else noServices"></ng-container>
 
 <ng-template #serviceList>
@@ -11,7 +11,6 @@
                 <th>Preview</th>
                 <th scope="col">Nombre y descripcion</th>
                 <th scope="col"> Unite price</th>
-                <th scope="col">Total price</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -40,17 +39,7 @@
             </td>
             </tr>
         </tbody>
-        <tfoot>
-            <tr>
-                <th scope="row">Totals</th>
-                <td></td>
-                <td></td>
-                <td>16</td>
-                <td>2050</td>
-                <td>16750</td>
-                <th scope="row">Actions</th>
-            </tr>
-        </tfoot>
+
     </table>
 </ng-template>
 
