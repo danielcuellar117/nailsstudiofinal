@@ -7,6 +7,8 @@ import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { NewProductComponent } from './pages/products/new-product/new-product.component';
 import { UpdateProductComponent } from './pages/products/update-product/update-product.component';
+import { NewServiceComponent } from './pages/services/new-service/new-service.component';
+import { UpdateServiceComponent } from './pages/services/update-service/update-service.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,8 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       { path: 'servicios', component: ServicesComponent },
+      { path: 'servicios/new-service', component: NewServiceComponent},
+      { path: 'servicios/update/:id', component: UpdateServiceComponent},
       { path: 'talleres', component: TallerDashComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'products/new', component: NewProductComponent },
