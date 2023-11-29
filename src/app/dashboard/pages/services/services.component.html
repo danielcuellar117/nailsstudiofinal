@@ -9,9 +9,9 @@
         <thead>
             <tr class="tri">
                 <th>Preview</th>
-                <th scope="col">Nombre y descripcion</th>
-                <th scope="col"> Unite price</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Nombre y descripción</th>
+                <th scope="col"> Precio </th>
+                <th scope="col">Editar/Eliminar</th>
             </tr>
         </thead>
         <tbody>
@@ -23,7 +23,7 @@
                 <h3>{{service.name}}</h3>
                 <p class="service_description">{{service.description}}</p>
             </td>
-            <td>{{service.price}}</td>
+            <td>{{service.price! | currency}}</td>
             <td>
                 <button 
                 class="btn btn-update" 
