@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { catchError, map, of, tap } from 'rxjs';
+import Swal from 'sweetalert2';
+import { Service } from 'src/app/interfaces/service';
 import { ServiceService } from 'src/app/services/services.service';
 import { ValidateFormsService } from 'src/app/services/validate-forms.service';
 
@@ -17,14 +20,44 @@ export class UpdateServiceComponent {
     urlImage: [ '', this.validateForm.validateNormalUrl ],
     description: [ '', [ this.validateForm.validateDescription ] ]
   });
+  serviceId!: string;
 
   constructor(
     private formBuilder: FormBuilder,
     private servicesService: ServiceService,
     private router: Router,
-    private validateForm: ValidateFormsService
+    private validateForm: ValidateFormsService,
+    private activatedRoute: ActivatedRoute
   ) {}
+    
+  ngOnInit(){
+    this.activatedRoute.params
+    .pipe(
+      tap( response => {
+        console.log(response);
 
+        return response;
+      }),
+      map( ( params: any) => params.id )
+    ).subscribe(id=>{
+      console.log(id);
+
+      this.serviceId = id; 
+
+      this.servicesService.getServiceById(id).subscribe((data:any)=>{
+        console.log(data);
+
+        const{name, description, price, urlImage} = data;
+
+        this.serviceForm.setValue({
+          name,
+          description,
+          price,
+          urlImage
+        })
+      })
+    })
+  }
 
   updateService() {
     console.log( this.serviceForm.value );

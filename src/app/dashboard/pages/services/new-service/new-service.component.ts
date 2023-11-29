@@ -26,7 +26,7 @@ export class NewServiceComponent {
   ) {}
 
 
-  createservice() {
+  createService() {
     console.log( this.serviceForm.value );
 
     this.servicesService.createService( this.serviceForm.value )
