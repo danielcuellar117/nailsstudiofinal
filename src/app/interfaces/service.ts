@@ -5,4 +5,5 @@ export interface Service {
     price: number;
     urlImage:string;
     userId:string;
+    _id: string;
 }
