@@ -1,36 +1,57 @@
-.menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 1rem;
-  margin: 0;
-  background-color: whitesmoke;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.navegacion{
+	width: 100%;
+	margin: 0 0 5rem 0;
+	background: whitesmoke;
 }
-.list-item{
-  color: purple;
+
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+	list-style: none;
+}
+
+.menu-list{
+	position: relative;
+	display: inline-block;
+  width: 20%;
+}
+
+.link-dashboard{
+	display: block;
+	padding: 15px;
+	color: black;
+	font-family: 'Open sans';
+	text-decoration: none;
   font-size: 1rem;
 }
-.list-dashboard{
-  margin: 1rem;
+
+.menu li a:hover{
+	transition: all .3s;
 }
 
-.list-link{
-  list-style: none;
-}
-.link-dashboard {
+/* Submenu*/
+
+.submenu{
   display: block;
-  padding: 10px;
-  border-radius: 5px;
-  color: #000000;
-  transition: background-color 0.3s ease;
+  list-style: none;
+	position: absolute;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .8s;
 }
 
-.link-dashboard:hover {
-  background-color: #fff4f4;
-  color: rgb(255, 121, 107);
+.submenu li a{
+	display: block;
+	padding: 8px;
+  background: whitesmoke;
+	color: black;
+	font-family: 'Open sans';
+	text-decoration: none;
 }
 
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
