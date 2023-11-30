@@ -11,8 +11,8 @@
                 <div class="informacion">
                   <h2 class="titu">{{service.name}}</h2>
                   <p class="descripcion">{{ service.description }}</p>
-                  <p class="precio"> $ {{service.price}}</p>
-                  <p class="precio-antes"> $ {{service.price1}}</p>
+                  <p class="precio"> {{service.price | currency}}</p>
+                  <p class="precio-antes"> {{service.price1 | currency }}</p>
                 </div>
                 <div class="action">
                   <button class="inscribirme agregar"><a href="#" style="text-decoration: none;">agendar</a></button>
