@@ -22,6 +22,8 @@ import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
     ProductsComponent,
     UpdateProductComponent,
     NewProductComponent,
+    UpdateServiceComponent,
+    NewServiceComponent
 
   ],
   imports: [
