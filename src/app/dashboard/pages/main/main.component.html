@@ -1,26 +1,34 @@
-<ul class="menu-dashboard">
-  <ul class="list-dashboard"> PRODUCTS
-      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products">Mis productos</a></li>
-      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products/new">Nuevo Producto</a></li>
-      <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/products/update/:id">actualizar producto</a></li>
+<nav class="navegacion">
+  <ul class="menu">
+      <li><a class="link-dashboard" routerLink="/dashboard">Dashboard</a></li>
+      <li class="menu-list"><a class="link-dashboard">Productos</a>
+          <ul class="submenu">
+              <li><a class="link-dashboard" routerLink="/dashboard/products">Mis productos</a></li>
+              <li><a class="link-dashboard" routerLink="/dashboard/products/new">Producto nuevo</a></li>
+
+          </ul>
+      </li>
+      <li class="menu-list"><a class="link-dashboard">Servicios</a>
+          <ul class="submenu">
+              <li><a class="link-dashboard" routerLink="/dashboard/servicios">Mis servicios</a></li>
+              <li><a class="link-dashboard" routerLink="/dashboard/servicios/new-service"> servicio nuevo</a></li>
+          </ul>
+      </li>
+      <li class="menu-list"><a class="link-dashboard">Talleres</a>
+          <ul class="submenu">
+              <li><a class="link-dashboard" routerLink="/dashboard/talleres">Mis Talleres</a></li>
+              <li><a class="link-dashboard" routerLink="/dashboard/talleres/new">Taller nuevo</a></li>
+          </ul>
+      </li>
+      <li class="list-dashboard">
+        <a *ngIf="user.role == 'admin'" routerLink="/no-existe">No existe</a>
+      </li>
   </ul>
-
-  <ul class="list-dashboard"> SERVICIOS
-    <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios"> mis servicios</a></li>
-    <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios">nuevo servicio</a></li>
-    <li class="list-link"><a class="link-dashboard" routerLink="/dashboard/servicios">actualizar servicio</a></li>
-  </ul>
-
-  <ul class="list-dashboard"> TALLERES
-    <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">mis talleres</a></li>
-    <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">nuevo taller</a></li>
-    <li class="list-link"> <a class="link-dashboard" routerLink="/dashboard/talleres">actualizar taller</a></li>
-  </ul>
+</nav>
 
 
-  <li class="list-dashboard">
-      <a *ngIf="user.role == 'admin'" routerLink="/no-existe">No existe</a>
-  </li>
-</ul>
+
+
+
 
 <router-outlet></router-outlet>

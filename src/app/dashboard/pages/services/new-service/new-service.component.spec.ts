@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewServiceComponent } from './new-service.component';
 
-describe('NewServiceComponent', () => {
+describe('NewserviceComponent', () => {
   let component: NewServiceComponent;
   let fixture: ComponentFixture<NewServiceComponent>;
 

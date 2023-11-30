@@ -1,21 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { UpdateServiceComponent } from './update-service.component';
+import { UpdateServiceComponent } from "./update-service.component";
 
-describe('UpdateServiceComponent', () => {
-  let component: UpdateServiceComponent;
-  let fixture: ComponentFixture<UpdateServiceComponent>;
+describe('UpdateServiceComponent', ()=>{
+    let component: UpdateServiceComponent;
+    let fixture: ComponentFixture<UpdateServiceComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [UpdateServiceComponent]
+    beforeEach(()=>{
+        TestBed.configureTestingModule({
+            declarations:[UpdateServiceComponent]
     });
-    fixture = TestBed.createComponent(UpdateServiceComponent);
+    fixture= TestBed.createComponent(UpdateServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+})
+    it('should create', ()=>{
+        expect(component).toBeTruthy()
+    });
+})

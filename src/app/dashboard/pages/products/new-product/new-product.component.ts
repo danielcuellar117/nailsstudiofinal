@@ -11,10 +11,10 @@ import { ValidateFormsService } from 'src/app/services/validate-forms.service';
 })
 export class NewProductComponent {
   categories = [
-    { name: 'Tecnologia', value: 'tecnologia' },
-    { name: 'Hogar', value: 'hogar' },
-    { name: 'Verduras', value: 'verduras' },
-    { name: 'Frutas', value: 'frutas' }
+    { name: 'Esmaltes', value: 'Esmaltes' },
+    { name: 'Pinceles', value: 'Pinceles' },
+    { name: 'Accesorios', value: 'Accesorios' },
+    { name: 'Acrilicos', value: 'Acrilicos' }
   ];
   productForm: FormGroup = this.formBuilder.group({
     name: [ '', [ Validators.required, Validators.minLength( 3 ) ] ],

@@ -9,6 +9,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { UpdateProductComponent } from './pages/products/update-product/update-product.component';
 import { NewProductComponent } from './pages/products/new-product/new-product.component';
 import { NewServiceComponent } from './pages/services/new-service/new-service.component';
+import { UpdateServiceComponent } from './pages/services/update-service/update-service.component';
+import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
 
 
 
@@ -20,8 +22,6 @@ import { NewServiceComponent } from './pages/services/new-service/new-service.co
     ProductsComponent,
     UpdateProductComponent,
     NewProductComponent,
-    NewServiceComponent,
-    
 
   ],
   imports: [
