@@ -35,7 +35,7 @@ export class ServicesComponent {
     }
 
     update(id: string){
-      this.router.navigateByUrl(`/dashboard/services/update/${ id }`);
+      this.router.navigateByUrl(`/dashboard/servicios/update/${ id }`);
 
     }
 
