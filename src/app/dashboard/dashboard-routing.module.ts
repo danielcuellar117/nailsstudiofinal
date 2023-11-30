@@ -9,6 +9,7 @@ import { NewProductComponent } from './pages/products/new-product/new-product.co
 import { UpdateProductComponent } from './pages/products/update-product/update-product.component';
 import { NewServiceComponent } from './pages/services/new-service/new-service.component';
 import { UpdateServiceComponent } from './pages/services/update-service/update-service.component';
+import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'servicios/new-service', component: NewServiceComponent},
       { path: 'servicios/update/:id', component: UpdateServiceComponent},
       { path: 'talleres', component: TallerDashComponent },
+      { path: 'talleres/new', component: NewTallerComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'products/new', component: NewProductComponent },
       { path: 'products/update/:id', component: UpdateProductComponent }
