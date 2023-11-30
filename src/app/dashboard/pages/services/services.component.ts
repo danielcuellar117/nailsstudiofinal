@@ -14,7 +14,7 @@ import { Service } from 'src/app/interfaces/service';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit{
   services! : Service[];
 
   constructor(
