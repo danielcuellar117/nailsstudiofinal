@@ -14,7 +14,7 @@ import { Service } from 'src/app/interfaces/service';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit{
   services! : Service[];
 
   constructor(
@@ -34,12 +34,11 @@ export class ServicesComponent {
       })
     }
 
-    update(id: string){
+    updateServiceButton(id: string){
       this.router.navigateByUrl(`/dashboard/servicios/update/${ id }`);
-
     }
 
-    remove( id: string ){
+    removeServiceButton( id: string ){
 
       const swalWithBootstrapButtons = Swal.mixin({
         customClass: {

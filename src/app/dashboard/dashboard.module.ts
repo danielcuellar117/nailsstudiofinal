@@ -28,6 +28,7 @@ import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.co
     NewTallerComponent,
     TallerDashComponent
 
+
   ],
   imports: [
     CommonModule,
