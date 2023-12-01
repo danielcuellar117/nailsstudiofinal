@@ -34,12 +34,11 @@ export class ServicesComponent implements OnInit{
       })
     }
 
-    update(id: string){
+    updateServiceButton(id: string){
       this.router.navigateByUrl(`/dashboard/servicios/update/${ id }`);
-
     }
 
-    remove( id: string ){
+    removeServiceButton( id: string ){
 
       const swalWithBootstrapButtons = Swal.mixin({
         customClass: {

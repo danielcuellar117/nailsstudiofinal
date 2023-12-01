@@ -38,7 +38,7 @@ export class ServiceService {
     return this.http.get<ResponseServices>( `${ this.BASE_URL }/services/${ id }`)
       .pipe(
         tap( data => {
-          console.log( data );
+          console.log( ':::', data );
 
           return data;
         }),
@@ -63,13 +63,13 @@ export class ServiceService {
     );
   }
 
-  updateService( id: string, Service: Service  ) {
+  updateService( id: string, service: Service  ) {
 
     console.log( id );
 
     return this.http.patch(
-      `${ this.BASE_URL }/Services/${ id }`,
-      Service,
+      `${ this.BASE_URL }/services/${ id }`,
+      service,
       { headers: this.headers }
     );
   }

@@ -27,6 +27,72 @@
       </small>
     </div>
   </div>
+
+  
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="number"
+      formControlName="price"
+      placeholder="Precio del Producto"
+    />
+    <div
+      *ngIf="serviceForm.get( 'price' )?.invalid && ( serviceForm.get( 'price' )?.dirty || serviceForm.get( 'price' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'required' ]">
+        Precio del producto es requerido.
+      </small>
+      <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
+        El precio debe ser mayor o igual a cero
+      </small>
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label for="image">Imagen del producto</label>
+    <input
+      id="image"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+    />
+    <div
+      *ngIf="serviceForm.get( 'urlImage' )?.invalid && ( serviceForm.get( 'urlImage' )?.dirty || serviceForm.get( 'urlImage' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
+        La URL no tiene formato de imagen permitido
+      </small>
+    </div>
+  </div>
+
+  
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del Producto"
+      cols="20"
+      rows="5"
+      minlength="3"
+      maxlength="140"
+    ></textarea>
+    <div
+      *ngIf="serviceForm.get( 'description' )?.invalid && ( serviceForm.get( 'description' )?.dirty || serviceForm.get( 'description' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
+        La descripción debe tener una longitud de entre 3 a 140 caracteres
+      </small>
+    </div>
+  </div>
+
   <!-- Resto del formulario ... -->
 
   <div class="field">

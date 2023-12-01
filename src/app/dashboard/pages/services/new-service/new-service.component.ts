@@ -37,7 +37,7 @@ export class NewServiceComponent {
     this.serviceForm.reset();
 
     setTimeout( () => {
-      this.router.navigate( [ 'dashboard', 'services' ] );
+      this.router.navigate( [ 'dashboard', 'servicios' ] );
     }, 1000 );
   }
 }
