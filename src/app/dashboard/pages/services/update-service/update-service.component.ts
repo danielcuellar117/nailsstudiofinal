@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { catchError, map, of, tap } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import { Service } from 'src/app/interfaces/service';
 import { ServiceService } from 'src/app/services/services.service';
@@ -12,14 +12,15 @@ import { ValidateFormsService } from 'src/app/services/validate-forms.service';
   templateUrl: './update-service.component.html',
   styleUrls: ['./update-service.component.css']
 })
-export class UpdateServiceComponent {
+export class UpdateServiceComponent implements OnInit {
  
   serviceForm: FormGroup = this.formBuilder.group({
-    name: [ '', [ Validators.required, Validators.minLength( 3 ) ] ],
-    price: [ '', [ Validators.required, this.validateForm.validatePrice ] ],
-    urlImage: [ '', this.validateForm.validateNormalUrl ],
-    description: [ '', [ this.validateForm.validateDescription ] ]
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    price: ['', [Validators.required, this.validateForm.validatePrice]],
+    urlImage: ['', this.validateForm.validateNormalUrl],
+    description: ['', [this.validateForm.validateDescription]]
   });
+
   serviceId!: string;
 
   constructor(
@@ -30,47 +31,52 @@ export class UpdateServiceComponent {
     private activatedRoute: ActivatedRoute
   ) {}
     
-  ngOnInit(){
+  ngOnInit() {
     this.activatedRoute.params
-    .pipe(
-      tap( response => {
-        console.log(response);
+      .pipe(
+        tap(response => {
+          console.log(response);
+          return response;
+        }),
+        map((params: any) => params.id)
+      )
+      .subscribe(id => {
+        console.log(id);
+        this.serviceId = id; 
 
-        return response;
-      }),
-      map( ( params: any) => params.id )
-    ).subscribe(id=>{
-      console.log(id);
+        this.servicesService.getServiceById(id).subscribe((data: any) => {
+          console.log(data);
 
-      this.serviceId = id; 
+          const { name, description, price, urlImage } = data;
 
-      this.servicesService.getServiceById(id).subscribe((data:any)=>{
-        console.log(data);
-
-        const{name, description, price, urlImage} = data;
-
-        this.serviceForm.setValue({
-          name,
-          description,
-          price,
-          urlImage
-        })
-      })
-    })
+          this.serviceForm.setValue({
+            name,
+            description,
+            price,
+            urlImage
+          });
+        });
+      });
   }
 
   updateService() {
-    console.log( this.serviceForm.value );
+    console.log(this.serviceForm.value);
 
-    this.servicesService.createService( this.serviceForm.value )
-      .subscribe( ( response ) => {
-        console.log( response );
+    this.servicesService.updateService(this.serviceId, this.serviceForm.value)
+      .subscribe(response => {
+        console.log(response);
       });
 
     this.serviceForm.reset();
 
-    setTimeout( () => {
-      this.router.navigate( [ 'dashboard', 'services' ] );
-    }, 1000 );
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto actualizado',
+      showConfirmButton: false,
+      timer: 1500
+    });
+
+    this.router.navigate(['dashboard', 'servicios']);
   }
 }

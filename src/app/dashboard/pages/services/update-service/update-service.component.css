@@ -1,82 +1,67 @@
-h2 {
+h2{
     text-align: center;
-    color: #2c3e50;
+    font-size: 1.4rem;
+    margin: .5rem;
+    color:rgb(138, 44, 138);
   }
   
-  h3 {
-    text-align: center;
-    color:purple;
-    font-size: 1.2rem;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  thead {
-    background-color: pink;
-    color: #353535;
-  }
-  th, td {
+  .form-service {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
     padding: 20px;
-    text-align: left;
-    border-bottom: 1px solid #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  tbody tr:hover {
-    background-color: #ecf0f1;
+  /* Estilos para los campos del formulario */
+  .field {
+    margin-bottom: 20px;
   }
   
-  .service__image {
-    max-width: 130px;
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .input-field {
     width: 100%;
-    max-height: 110px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    transition: border-color 0.3s;
   }
   
-  .service__description {
-    color: black;
-    font-size: 1rem;
+  .input-field:focus {
+    border-color: #3498db;
   }
   
-  .btn {
-    margin: 0 5px;
+  /* Estilos para el mensaje de error */
+  .error-message {
+    color: #e74c3c;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+  
+  /* Estilos para el botón de envío */
+  .button {
+    background-color: #3498db;
     color: #fff;
-    padding: 5px 12px;
+    padding: 10px 15px;
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
   }
-  .btn-update{
-    background-color: #2ecc71;
-    transition: background-color 0.3s ease;
-  }
-  .btn-delete{
-    background: rgb(255, 16, 16);
-    transition: background-color 0.3s ease;
-  }
-  /* hover */
-  .btn-delete:hover {
-    background-color: rgb(206, 0, 0);
-  }
-  .btn-update:hover {
-    background-color: #27ae60;
+  
+  .button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
   }
   
-  tfoot {
-    background-color: pink;
-    color: #353535;
-  }
-  
-  /* Estilos para la fila de totales */
-  tfoot th {
-    padding: 20px;
-    text-align: right;
-  }
-  
-  /* Estilos para las acciones en la fila de totales */
-  tfoot .btn {
-    margin: 0 5px;
+  .button:hover {
+    background-color: #2980b9;
   }
   
