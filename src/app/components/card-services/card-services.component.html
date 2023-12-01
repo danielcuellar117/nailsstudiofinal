@@ -11,7 +11,7 @@
                 <div class="informacion">
                   <h2 class="titu">{{service.name}}</h2>
                   <p class="descripcion">{{ service.description }}</p>
-                  <p class="precio"> $ {{service.price}}</p>
+                  <p class="precio"> $ {{ service.price | number:'1.0-0' }}</p>
                   <p class="precio-antes"> $ {{service.price1}}</p>
                 </div>
                 <div class="action">

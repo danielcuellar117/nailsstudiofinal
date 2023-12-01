@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ResponseProducts } from '../interfaces/response-products';
 import { environment } from 'src/environments/environment.development';
 import { Product } from '../interfaces/product';
-import { catchError, map, of, tap } from 'rxjs';
+import {  map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class ProductService {
   constructor( private http: HttpClient ) {
     const token = localStorage.getItem( 'token' );
     this.token = token ? token : '';
-    this.headers = new HttpHeaders().set( 'X-Token', this.token );
+    this.headers = new HttpHeaders().set( 'x-token', this.token );
    }
 
   getAllProducts() {
