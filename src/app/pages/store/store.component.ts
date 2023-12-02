@@ -10,8 +10,6 @@ import { ProductService } from 'src/app/services/product.service';
 export class StoreComponent implements OnInit {
   products!: Product[];
 
-
-
   constructor(private productService: ProductService){
     console.log( 'hola');
 
@@ -22,7 +20,6 @@ export class StoreComponent implements OnInit {
 
       this.products = data.data;
     })
-
   }
 
 

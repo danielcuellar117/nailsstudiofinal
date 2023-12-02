@@ -17,7 +17,7 @@ export class ProductService {
 
   constructor( private http: HttpClient ) {
     const token = localStorage.getItem( 'token' );
-    this.token = token ? token : '';
+    this.token = token ? token : '';    // ( condicion ) : 'si cumple' ? 'si no cumple'
     this.headers = new HttpHeaders().set( 'X-Token', this.token );
    }
 
