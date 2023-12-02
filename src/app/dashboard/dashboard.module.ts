@@ -27,7 +27,10 @@ import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.co
     UpdateServiceComponent,
     NewTallerComponent,
     TallerDashComponent
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9357cd40eca7eb07c91e47ebc8dfa28713bacbd7
 
   ],
   imports: [
