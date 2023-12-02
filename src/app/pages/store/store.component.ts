@@ -31,10 +31,18 @@ export class StoreComponent implements OnInit {
 
   addProduct( product: any ) {
 
-    this.shoppingCart.push( product );
-    console.log( ':::', this.shoppingCart );
+    if (this.shoppingCart.some((item:any) => item._id === product._id)) {
+      if (this.shoppingCart.find((item: any) => item.id === product.id)) {
+        product.count +=1;
+      }
+    }
+    else{
+      product.count = 1
+      this.shoppingCart.push( product );
+    }
 
     localStorage.setItem( 'shoppingCart', JSON.stringify( this.shoppingCart ) );
+    console.log( ':::', this.shoppingCart );
   }
 
 }
