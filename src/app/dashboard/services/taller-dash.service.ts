@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 import { ResponseTalleres } from 'src/app/interfaces/response-talleres';
+import { Taller } from 'src/app/interfaces/taller';
 import { environment } from 'src/environments/environment.development';
 
 @Injectable({
@@ -10,15 +11,23 @@ import { environment } from 'src/environments/environment.development';
 export class TallerDashService {
 
   BASE_URL: string = environment.baseUrl;
+  headers: HttpHeaders;
+  token: string;
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+    const token = localStorage.getItem( 'token' );
+    this.token = token ? token : '';
+    this.headers = new HttpHeaders().set( 'X-Token', this.token );
+   }
 
-  createTaller( inputDataForm: AbstractControl) {
-    const data = inputDataForm.value;
+  createTaller( data: Taller) {
+    // const data = inputDataForm.value;
 
-    return this.http.post( `${ this.BASE_URL }/talleres`, data );
+    return this.http.post<Taller>( `${ this.BASE_URL }/talleres`, data,
+    { headers: this.headers }
+    );
   }
 
   getAllTalleres() {

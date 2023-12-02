@@ -11,6 +11,7 @@ import { NewProductComponent } from './pages/products/new-product/new-product.co
 import { NewServiceComponent } from './pages/services/new-service/new-service.component';
 import { UpdateServiceComponent } from './pages/services/update-service/update-service.component';
 import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
+import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.component';
 
 
 
@@ -22,8 +23,10 @@ import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
     ProductsComponent,
     UpdateProductComponent,
     NewProductComponent,
+    NewServiceComponent,
     UpdateServiceComponent,
-    NewServiceComponent
+    NewTallerComponent,
+    TallerDashComponent
 
   ],
   imports: [

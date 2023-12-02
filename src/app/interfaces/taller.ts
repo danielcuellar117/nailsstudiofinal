@@ -4,4 +4,5 @@ export interface Taller {
     price: number;
     urlImage: string,
     userId: string;
+    _id: string
 }
