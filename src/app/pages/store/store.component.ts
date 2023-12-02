@@ -9,11 +9,16 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class StoreComponent implements OnInit {
   products!: Product[];
+  shoppingCart: any = [];
 
-  
+
   constructor(private productService: ProductService){
     console.log( 'hola');
 
+  }
+
+  car(){
+    console.log(localStorage.getItem('car'))
   }
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe(data  => {
@@ -24,6 +29,12 @@ export class StoreComponent implements OnInit {
 
   }
 
+  addProduct( product: any ) {
 
+    this.shoppingCart.push( product );
+    console.log( ':::', this.shoppingCart );
+
+    localStorage.setItem( 'shoppingCart', JSON.stringify( this.shoppingCart ) );
+  }
 
 }

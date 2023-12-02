@@ -4,9 +4,11 @@
         <app-cards
           class="card"
           *ngFor="let product of products"
-          [products]="product">
+          [products]="product"
+          (dataProduct)="addProduct( $event )">
         </app-cards>
     </div>
+    <button (click)="car()">carrito por joder</button>
 <div>
 
   <!--
