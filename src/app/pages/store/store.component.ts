@@ -31,6 +31,7 @@ export class StoreComponent implements OnInit {
 
   addProduct( product: any ) {
 
+
     if (this.shoppingCart.some((item:any) => item._id === product._id)) {
       if (this.shoppingCart.find((item: any) => item.id === product.id)) {
         product.count +=1;
