@@ -13,6 +13,7 @@ export class StoreComponent implements OnInit {
 
 
 
+<<<<<<< HEAD
   constructor(private productService: ProductService){
     console.log( 'hola');
 
@@ -21,6 +22,11 @@ export class StoreComponent implements OnInit {
   car(){
     console.log(localStorage.getItem('car'))
   }
+=======
+  
+  constructor(private productService: ProductService){}
+  
+>>>>>>> c4409cc7d993ec0c8618809ffe5fe45161234376
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe(data  => {
       console.log(data);
