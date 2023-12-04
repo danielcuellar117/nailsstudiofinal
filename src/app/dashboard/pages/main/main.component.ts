@@ -7,10 +7,19 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
+
+  menuVariable: boolean= false;
+  menu_icon_variable: boolean=false;
+
   constructor( private authService: AuthService ) {}
 
   // Getters
   get user() {
     return this.authService.user;
   }
+    openMenu() {
+    this.menuVariable = !this.menuVariable;
+    this.menu_icon_variable= !this.menu_icon_variable;
+  }
+
 }

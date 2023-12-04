@@ -20,6 +20,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './auth/pages/main/main.component';
 import { CardServicesComponent } from './components/card-services/card-services.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { HeaderDashboardComponent } from './components/header-dashboard/header-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ServicesComponent } from './pages/services/services.component';
     TalleresComponent,
     // componenets
     HeaderComponent,
+    HeaderDashboardComponent,
     FooterComponent,
     CardsComponent,
     BannerTiendaComponent,
