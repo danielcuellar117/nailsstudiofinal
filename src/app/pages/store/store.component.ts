@@ -11,10 +11,8 @@ export class StoreComponent implements OnInit {
   products!: Product[];
 
   
-  constructor(private productService: ProductService){
-    console.log( 'hola');
-
-  }
+  constructor(private productService: ProductService){}
+  
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe(data  => {
       console.log(data);
