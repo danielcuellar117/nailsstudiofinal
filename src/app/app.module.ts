@@ -40,7 +40,7 @@ import { ServicesComponent } from './pages/services/services.component';
     TallerComponent,
     CardTallerComponent,
     CardServicesComponent,
-    ServicesComponent
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
