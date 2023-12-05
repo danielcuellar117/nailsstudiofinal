@@ -9,7 +9,7 @@ import {  map, tap } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class ProductService { 
   // Atributos
   BASE_URL: string = environment.baseUrl;
   headers: HttpHeaders;

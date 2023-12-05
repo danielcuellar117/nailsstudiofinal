@@ -29,6 +29,7 @@ const routes: Routes = [
   },
   // {path: "", component: HomeComponent},
   {path: "home", component: HomeComponent},
+  { path: 'agenda-una-cita/:serviceName', component: AgendaComponent },
   {path: "agenda-una-cita", component: AgendaComponent},
   {path: "tienda", component: StoreComponent},
   {path: "talleres", component: TalleresComponent},
