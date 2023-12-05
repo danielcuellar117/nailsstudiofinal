@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, MaxLengthValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import { ValidateFormsService } from 'src/app/services/validate-forms.service';
@@ -22,7 +22,7 @@ export class NewProductComponent {
     quantity: [ '', [ Validators.required, this.validateForm.validateQuantity ] ],
     urlImage: [ '', this.validateForm.validateNormalUrl ],
     category: [ '' ],
-    description: [ '', [ this.validateForm.validateDescription ] ]
+    description: [ '', [ this.validateForm.validateDescription, Validators.maxLength(15) ] ]
   });
 
   constructor(
