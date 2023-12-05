@@ -1,359 +1,72 @@
-
-.service {
-    margin: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    flex-basis: 100%;
+.modern-card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.img-img {
-    display: flex;
-    border-radius: 7%;
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
+.modern-card:hover {
+  transform: scale(1.02);
 }
 
-.informacion {
-    flex-grow: 1;
-    padding: 10px;
-    align-items: baseline;
-    display: flex;
-    flex-direction: column;
+.card-img {
+  flex-shrink: 0;
+  width: 100px;
+  overflow: hidden;
 }
 
-
-.titu {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.descripcion {
-    font-size: 14px;
-    margin: 5px 0;
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.precio {
-    font-size: 20px;
-    font-weight: bold;
-    color: #f03ed8;
-    margin: 0;
+.card-info {
+  flex-grow: 1;
 }
 
-.precio-antes {
-    font-size: 20px;
-    font-weight: bold;
-    color: #686767;
-    margin: 0;
-    text-decoration:line-through
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-button {
-    background-color: #0074d9;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.card-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
 }
 
-.mas {
-    justify-content: flex-start;
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f03ed8;
 }
 
-.inscribirme {
-    text-decoration: none;
-    color: blueviolet;
+.card-action {
+  text-align: center;
 }
 
-.content-service {
-    display: flex;
-    align-items: center;
+.card-action{
+  background-color: #da62ac;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.inscribirme.agregar {
-    margin: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
-
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-}
-body{
-    background-color: #FFF6F4 ;
-    background-image: url(../../../assets/images/patron.webp);
-    background-repeat: repeat;
-    background-size: 40px;
-    background-position: 0 10px;
-    box-shadow: 0 0 0 10px #fff inset;
-    background-attachment: fixed;
-    backface-visibility: hidden;
-}
-.header{
-    background-color: #ffdcdc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80px;
-    padding: 5px 10%;
-}
-.header .logo-header{
-    cursor: pointer;
-    
-}
-.header .logo-header img{
-    height: 100px;
-    width: auto;
-}
-.header .logo-header img:hover{
-    transform: scale(1.1);
-    transition: all 0.3s;
-
-}
-.header .nav-links{
-    list-style: none;
-}
-
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
-}
-.header .nav-links li:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-    
-}
-
-.header .nav-links a{
-    font-size: 700;
-    color: #242424;
-    text-decoration: none;
-}
-.header .nav-links li a:hover{
-    color: #894DAD;
-}
-.header .btn button{
-    font-weight: 700;
-    color: #894DAD;
-    padding: 9px 25px;
-    background: #eceff1;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.1s ease 0s;
-}
-.header .btn button:hover{
-    background-color: #e2f1f8;
-    color: #242424;
-    transform: scale(1.1);
-}
-.nav_toggle{
-    display: none; /* Por defecto, ocultamos el icono de hamburguesa en pantallas grandes */
-    flex-direction: column;
-    cursor: pointer;
-}
-@media (max-width: 1081px) {
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-links{
-        position: absolute;
-        top: 105px;
-        background: #ffdcdc;
-        display: flex;
-        flex-direction: column;
-        left: 0;
-        width: 100%;
-        height: auto;
-        transform: translateX(-100%);
-        transition: 0.4s ease all;
-        
-    }
-    .nav-links li{
-        text-align: center;
-        margin: 1%;
-    }
-    .nav_toggle{
-        display: flex !important;
-        flex-direction: column;
-        margin: 15px;
-    }
-    .nav_toggle span{
-        width: 30px;
-        height: 4px;
-        background: black;
-        margin-bottom: 5px;
-        border-radius: 2px;
-        transform-origin: 5px 0px;
-        transition: all 0.2s linear;
-    }
-    .close span{
-        transform: rotate(45deg) translate(0px,0px);
-    }
-    .close span:nth-child(2){
-        display: none;
-    }
-    .close span:nth-child(3){
-        transform: rotate(-45deg) translate(-5px, 1px);
-    }
-    .open {
-        transform: translateX(0) !important;
-        transform: translateY(0) !important;
-    }
-    .footer-inner{
-        flex-direction: column;
-        align-items: center;
-    }
-    .title-banner {
-        font-size: 2rem;
-        }
-    }
-.talleres-online{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.contenedor-principal {
-    padding: 20px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    
-}
-.titulo a{
-    text-decoration: none;
-    color: #242424;
-}
-
-.titulo:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
-}
-.imagen{
-    display: flex;
-    justify-content: center;
-}
-.imagen-curso{
-    width: 750px;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 1rem;
-}
-.informa-curso {
-    font-size: 18px;
-    margin-top: 10px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin-right: 10rem;
-    margin-left: 10rem;
-}
-
-.precio{
-    margin-top: 1rem;
-    font-weight: bolder;
-}
-.inscribirme{
-    margin-top: 10px;
-    font-weight: 700;
-    color: #894DAD;
-    padding: 9px 25px;
-    background:#da62ac;
-    border: none;
-    margin-left: 30%;
-    margin-right: 30%;
-    }
-    .inscribirme:hover{
-        opacity: 10;
-        transition: 1s ease-in-out;
-        transform: scale(1.1);
-        text-decoration: underline;
-        
-    }
-.requerimientos-principal{
-    background-color: #ffdcdc8e;
-}
-.requerimientos-outter{
-    display: flex;
-    justify-content: center;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-bottom: 2rem;
-    
-   
-}
-
-.requerimientos-inner{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 2rem;                                                                                                                                                                                                                                                                                                                     
-}
-.requerimientos-title{
-    margin: 1rem;
-}
-
-
-
-.temario-outter{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    background-color: transparent;
-}
-.temario-title{
-    display: flex;
-    justify-content: center;
-    font-size:1.5rem;
-    margin: 1rem;
-    height: 2rem;
-    align-items: center;
-    
-}
-.clases {
-    list-style: none;
-    background-color: #e2f1f8;
-    margin: 1rem;
-}
-.clases li {
-    list-style: none;
-    background-color: #e2f1f8;
-    margin: 1rem;
-    display: flex;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-
-/** Dispositivos mas grandes */
-@media ( min-width: 567px ) {
-    .service {
-        flex-basis: 46%;
-    }
-}
-
-@media ( min-width: 992px ) {
-    .service {
-        flex-basis: 30%;
-    }
+.card-action:hover {
+  background-color: #894DAD;
 }

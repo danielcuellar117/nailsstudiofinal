@@ -27,8 +27,10 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import( './dashboard/dashboard.module' ).then( module => module.DashboardModule )
   },
-  // {path: "home", component: HomeComponent},
-  {path: "", component: HomeComponent},
+
+  // {path: "", component: HomeComponent},
+  {path: "home", component: HomeComponent},
+  { path: 'agenda-una-cita/:serviceName', component: AgendaComponent },
   {path: "agenda-una-cita", component: AgendaComponent},
   {path: "tienda", component: StoreComponent},
   {path: "talleres", component: TalleresComponent},
