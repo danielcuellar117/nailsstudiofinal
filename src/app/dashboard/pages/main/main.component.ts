@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -11,7 +12,11 @@ export class MainComponent {
   menuVariable: boolean= false;
   menu_icon_variable: boolean=false;
 
-  constructor( private authService: AuthService ) {}
+  constructor( 
+    private authService: AuthService,
+    private router: Router
+    ) {}
+
 
   // Getters
   get user() {
@@ -20,6 +25,10 @@ export class MainComponent {
     openMenu() {
     this.menuVariable = !this.menuVariable;
     this.menu_icon_variable= !this.menu_icon_variable;
+  }
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigateByUrl('/')
   }
 
 }
