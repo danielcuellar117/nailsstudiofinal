@@ -27,11 +27,9 @@ import { CarComponent } from './components/car/car.component';
   declarations: [
     //pages
     AppComponent,
-    TalleresComponent,
     AgendaComponent,
     StoreComponent,
     HomeComponent,
-    TalleresComponent,
     // componenets
     HeaderComponent,
     HeaderDashboardComponent,
@@ -44,7 +42,8 @@ import { CarComponent } from './components/car/car.component';
     CardTallerComponent,
     CardServicesComponent,
     ServicesComponent,
-    CarComponent
+    CarComponent,
+    TalleresComponent
   ],
   imports: [
     BrowserModule,

@@ -18,27 +18,27 @@ export class StoreComponent implements OnInit {
 
   }
 
-  car(){
-    this.carrito = localStorage.getItem('shoppingCart')
-    this.carrito = JSON.parse(this.carrito)
+  // car(){
+  //   this.carrito = localStorage.getItem('shoppingCart')
+  //   this.carrito = JSON.parse(this.carrito)
 
-    for (let i = 0; i < this.carrito.length; i++) {
-      delete this.carrito[i].name;
-      delete this.carrito[i].description;
-      // delete this.carrito[i].quantity;
-      delete this.carrito[i].urlImage;
-      delete this.carrito[i].category;
-      delete this.carrito[i].userId;
-      delete this.carrito[i]._id;
-      this.carrito[i].price *= this.carrito[i].count;
-      this.shoppingCart[i].quantity -= this.carrito[i].count;
-      this.shoppingCart[i].quantity = 123;
-    }
+  //   for (let i = 0; i < this.carrito.length; i++) {
+  //     delete this.carrito[i].name;
+  //     delete this.carrito[i].description;
+  //     // delete this.carrito[i].quantity;
+  //     delete this.carrito[i].urlImage;
+  //     delete this.carrito[i].category;
+  //     delete this.carrito[i].userId;
+  //     delete this.carrito[i]._id;
+  //     this.carrito[i].price *= this.carrito[i].count;
+  //     this.shoppingCart[i].quantity -= this.carrito[i].count;
+  //     this.shoppingCart[i].quantity = 123;
+  //   }
 
-   console.log(this.shoppingCart);
-   console.log(this.carrito);
+  //  console.log(this.shoppingCart);
+  //  console.log(this.carrito);
 
-  }
+  // }
 
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe(data  => {
