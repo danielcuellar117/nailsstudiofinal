@@ -66,6 +66,9 @@ header {
     cursor: pointer;
     transition: all 0.1s ease 0s;
 }
+.btn-login{
+    margin-left: 1px;
+}
 .btn button:hover{
     background-color: #e2f1f8;
     color: #242424;
