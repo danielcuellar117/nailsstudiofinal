@@ -17,16 +17,7 @@
     margin-right: 2rem;
     gap: 1rem;
 }
-.btn-login button{
-    font-weight: 700;
-    color: #894DAD;
-    padding: 9px 25px;
-    background: #eceff1;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.1s ease 0s;
-}
+
 @media (max-width: 1080px) {
 
     .footer-inner{
