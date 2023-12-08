@@ -30,6 +30,7 @@ export class StoreComponent implements OnInit {
 
       this.products = data.data;
 
+
       this.carritoService.$modal.subscribe(value =>{
         this.modal = value
       })

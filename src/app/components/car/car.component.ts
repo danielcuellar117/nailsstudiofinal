@@ -9,6 +9,7 @@ import { CarritoService } from 'src/app/services/carrito.service';
 })
 export class CarComponent {
   carrito: any = [];
+  aumento: any = 0;
   total: any = 0;
 
   constructor( private carritoService: CarritoService ){
@@ -20,6 +21,9 @@ export class CarComponent {
   closeCariito(){
     this.carritoService.$modal.emit(false)
   }
+  mas(){
+    this.aumento +=1;
+  }
   car(){
     this.carrito = localStorage.getItem('shoppingCart')
     this.carrito = JSON.parse(this.carrito)
@@ -28,10 +32,9 @@ export class CarComponent {
       this.carrito[i].price *= this.carrito[i].count;
       this.carrito[i].quantity -= this.carrito[i].count;
       this.total += this.carrito[i].price;
+      this.carrito[i].count += this.aumento;
+
     }
     console.log(this.carrito);
-
-
   }
-
 }

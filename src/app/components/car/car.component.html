@@ -1,17 +1,21 @@
-<br><br><br>
+<br><br><br> <br><br>
 
-<h2> <b> listado de productos </b> </h2>
-<div>
+<div class="carrito-container">
+  <h2> <b> listado de productos </b> </h2>
   <div class="carrito-details"
   *ngFor="let carrito of carrito"
   >
-  <hr>
-    <h3><b>Nombre: </b>{{ carrito.name }}</h3>
-    <p class="card-price"> <b> Cantidad: </b> {{ carrito.count }}</p>
+    <p><b>Producto: </b>{{ carrito.name }}</p>
+    <p class="card-price"> <b> Cantidad: </b> {{ carrito.count }}
+    <button>- </button> <button (click)="mas()">+</button></p>
     <p class="card-price"><b> Precio: </b>${{ carrito.price }}.000</p>
     <br> <hr><br>
   </div>
   <p> Precio total: {{ total }}.000 </p>
-  <button (click)="closeCariito()">X</button>
+  <div class="footer">
+    <button class="close-button" (click)="closeCariito()">close</button>
+    <button class="pagar-button">Pagar</button>
+  </div>
 </div>
+
 
