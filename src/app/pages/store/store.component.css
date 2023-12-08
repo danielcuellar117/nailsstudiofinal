@@ -22,6 +22,20 @@ h2 {
     gap: 2rem;
     overflow-x: auto;
 }
+.carrito {
+  position: fixed;
+  top: 0;
+  right: 0; /* Cambiado de left a right */
+  width: 30%; /* Ancho del 33% */
+  height: 100%;
+  background-color: rgba(250, 128, 114, 0.699);
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
 
 @media ( min-width: 568px ) {
   .cards {

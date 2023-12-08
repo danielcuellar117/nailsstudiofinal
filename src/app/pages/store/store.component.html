@@ -8,12 +8,11 @@
           (dataProduct)="addProduct( $event )">
         </app-cards>
     </div>
-    <!-- <button (click)="car()">carrito por joder</button> -->
 <div>
+<button (click)="opencarrito()">Shop</button>
+<div class="carrito" *ngIf="modal == true">
   <app-car></app-car>
+</div>
 
-  <!--
-    ddd
-    dd
-   -->
+
 
