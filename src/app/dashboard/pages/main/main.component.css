@@ -1,7 +1,64 @@
-.navegacion{
-	width: 100%;
-	margin: 0 0 5rem 0;
-	background: whitesmoke;
+header {
+    height: 5rem;
+    background-color: #ffdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    padding: 5px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo-header{
+    cursor: pointer;
+}
+.logo-header img{
+    height: 100px;
+    width: auto;
+}
+.logo-header img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+
+}
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.nav-links li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    
+}
+
+.nav-links a{
+    font-size: 700;
+    color: #242424;
+    text-decoration: none;
+}
+.nav-links li a:hover{
+    color: #894DAD;
+}
+.btn button{
+    font-weight: 700;
+    color: #894DAD;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.1s ease 0s;
+}
+.btn button:hover{
+    background-color: #e2f1f8;
+    color: #242424;
+    transform: scale(1.1);
 }
 
 .menu{
@@ -46,7 +103,7 @@
 .submenu li a{
 	display: block;
 	padding: 8px;
-  background: whitesmoke;
+	background: #ffdcdc;
 	color: black;
 	font-family: 'Open sans';
 	text-decoration: none;
@@ -55,4 +112,62 @@
 .menu li:hover .submenu{
 	visibility: visible;
 	opacity: 1;
+}
+
+@media (max-width: 1080px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul#_links {
+        z-index: 1;
+    }
+	
+/* Menu Hamburguesa */
+.nav-links{
+	position: fixed;
+	top: 100px;
+	background: #ffdcdc;
+	display: flex;
+	flex-direction: column;
+	left: -1100px;
+	width: 100%;
+	height: auto;
+	transition: 0.4s ease all;
+}
+.nav-links li{
+	text-align: center;
+	margin: 1%;
+}
+
+.menu_icon span{
+	width: 30px;
+	height: 4px;
+	background: black;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	transform-origin: 5px 0px;
+	transition: all 0.2s linear;        
+}
+.menu_icon {
+	display: flex !important;
+	flex-direction: column;
+	margin: 15px;
+	cursor: pointer;
+}
+.menuClass{
+	left: 0
+}
+
+.menu_icon_Class span:nth-child(2){
+	display: none;
+}
+.menu_icon_Class span:nth-child(1){
+	transform: rotate(45deg) translate(0px,0px);
+
+}
+.menu_icon_Class span:nth-child(3){
+	transform: rotate(-45deg) translate(-5px, 1px);
+}
 }
