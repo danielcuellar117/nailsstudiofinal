@@ -27,5 +27,6 @@ export class MainComponent {
   logout(){
     localStorage.removeItem('token');
     this.router.navigateByUrl('/');
+    window.location.reload();
   }
 }

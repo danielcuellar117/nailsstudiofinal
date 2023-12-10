@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   BASE_URL: string = environment.baseUrl;
-  private authData!: User;
+  private authData: User | null = null;
 
   constructor(
     private http: HttpClient,
@@ -73,6 +73,7 @@ export class AuthService {
             localStorage.setItem( 'token', data.token! );   // Actualiza Token guardado en el localStorage
           }
           else {
+            this.authData = null;
             localStorage.removeItem( 'token' );
           }
 

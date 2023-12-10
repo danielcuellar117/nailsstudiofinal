@@ -11,15 +11,15 @@ export class AppComponent {
   isLoggedIn: any = undefined;
 
   constructor( public authService: AuthService ) {
-    
+  }
+
+  ngOnInit(){
+    console.log(this.user)
     if (this.authService.user.hasOwnProperty("role")) {
       this.isLoggedIn= false;
     } else {
       this.isLoggedIn= true;
     }
-  }
-
-  ngOnInit(){
   }
 
   get user() {
