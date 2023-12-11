@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,9 +12,10 @@
 .mat-typography{
   min-height: 100%;
 }
-body{
+body {
+
     background-color: #FFF6F4 ;
-    margin: 0; 
+    margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 

@@ -29,7 +29,10 @@ const routes: Routes = [
     canActivate: [ verifyAuthGuard ]
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> e7d08ac62ebf582ac269fe14274c05dac6fefb7a
   @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
