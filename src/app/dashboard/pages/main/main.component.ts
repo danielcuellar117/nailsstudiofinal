@@ -28,5 +28,5 @@ export class MainComponent {
     localStorage.removeItem('token');
     this.router.navigateByUrl('/');
     window.location.reload();
-  }
+  } 
 }

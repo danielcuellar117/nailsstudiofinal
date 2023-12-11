@@ -7,15 +7,23 @@
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-decoration: none;
+    font-weight: 100;
 }
+.mat-typography{
+  min-height: 100%;
+}
+<<<<<<< HEAD
 
 body { 
+=======
+body{
+>>>>>>> f4017423681e7025837a1daa55cb03ed669716db
     background-color: #FFF6F4 ;
-    min-height: 100%;
+    margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 
 .image-responsive {
   max-width: 100%;

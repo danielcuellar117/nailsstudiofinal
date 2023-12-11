@@ -1,11 +1,10 @@
+<app-header *ngIf="!!this.authService.user && !this.authService.user.hasOwnProperty('role')"></app-header>
 <!-- <ng-template [ngIf]="this.authService.user.hasOwnProperty('role')" [ngIfElse]="elseContent">
-    
-</ng-template>
+    <app-header-dashboard></app-header-dashboard>
+</ng-template> -->
 <ng-template #elseContent>
     <app-header></app-header>
-</ng-template> -->
-
-<app-header *ngIf="!!this.authService.user && !this.authService.user.hasOwnProperty('role')"></app-header>
+</ng-template>
 <div class="page">
     <router-outlet></router-outlet>
 </div>

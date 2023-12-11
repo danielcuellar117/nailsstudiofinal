@@ -5,12 +5,14 @@
           class="card"
           *ngFor="let product of products"
           [products]="product"
-        ></app-cards>
+          (dataProduct)="addProduct( $event )">
+        </app-cards>
     </div>
 <div>
+<button (click)="opencarrito()">Shop</button>
+<div class="carrito" *ngIf="modal == true">
+  <app-car></app-car>
+</div>
 
-  <!--
-    ddd
-    dd
-   -->
+
 

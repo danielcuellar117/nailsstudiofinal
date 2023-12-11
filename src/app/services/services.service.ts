@@ -26,11 +26,7 @@ export class ServiceService {
 
   getAllServices() {
     
-    return this.http.get<ResponseServices>( `${ this.BASE_URL }/services`, { headers: this.headers }  )
-      .pipe(
-        tap( response => console.log( response )),
-        map( response => response )
-      );
+    return this.http.get<ResponseServices>( `${ this.BASE_URL }/services`)
   }
 
   getServiceById( id: string ) {
@@ -38,7 +34,7 @@ export class ServiceService {
     return this.http.get<ResponseServices>( `${ this.BASE_URL }/services/${ id }`)
       .pipe(
         tap( data => {
-          console.log( ':::', data );
+          console.log( data );
 
           return data;
         }),
@@ -63,13 +59,13 @@ export class ServiceService {
     );
   }
 
-  updateService( id: string, service: Service  ) {
+  updateService( id: string, Service: Service  ) {
 
     console.log( id );
 
     return this.http.patch(
       `${ this.BASE_URL }/services/${ id }`,
-      service,
+      Service,
       { headers: this.headers }
     );
   }

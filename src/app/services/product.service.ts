@@ -4,12 +4,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ResponseProducts } from '../interfaces/response-products';
 import { environment } from 'src/environments/environment.development';
 import { Product } from '../interfaces/product';
-import { catchError, map, of, tap } from 'rxjs';
+import {  map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class ProductService { 
   // Atributos
   BASE_URL: string = environment.baseUrl;
   headers: HttpHeaders;

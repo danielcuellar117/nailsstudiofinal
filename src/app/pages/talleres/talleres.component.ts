@@ -13,5 +13,5 @@ export class TalleresComponent {
   constructor(private tallerService: TallerService) {
     console.log(tallerService)
   }
-  
+
 }
