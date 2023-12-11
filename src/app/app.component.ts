@@ -8,14 +8,10 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'nailsstudiofinalfrontend';
-<<<<<<< HEAD
-
-=======
->>>>>>> e7d08ac62ebf582ac269fe14274c05dac6fefb7a
   isLoggedIn: any = undefined;
 
   constructor( public authService: AuthService ) {
-    
+
     if (this.authService.user.hasOwnProperty("role")) {
       this.isLoggedIn= false;
     } else {
