@@ -11,12 +11,18 @@
 }
 .mat-typography{
   min-height: 100%;
+  position: relative;
 }
 body {
 
     background-color: #FFF6F4 ;
+<<<<<<< HEAD
     margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+=======
+    margin: 0; 
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+>>>>>>> b21ded44032eed11d4ec98c1488cbe47528ca4a3
 }
 
 
