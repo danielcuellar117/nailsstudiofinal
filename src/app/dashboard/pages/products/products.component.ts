@@ -14,6 +14,9 @@ import { Router } from '@angular/router';
 export class ProductsComponent implements OnInit {
   // Atributos: Son la forma en que los datos van a estar disponibles para desplegarse en la View Componente
   products!: Product[];
+  otherProducts!: Product[];
+  totales: any;
+
 
   // Constructor: public, private, proteted
   constructor(
@@ -24,15 +27,52 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadData();
+    console.log( this.products );
+    
+    //this.sumarNumeros();
   }
 
   loadData() {
     this.productService.getAllProducts().subscribe( data => {
       console.log( data );    // { ok: true, data: [] }
       this.products = data.data;
+
+      console.log( this.products );
+
+      this.calcularPrecioTotalPorProducto();
+      this.calcularTotales();
+      
     });
   }
 
+  calcularPrecioTotalPorProducto() {
+
+    this.otherProducts = this.products.map( product => {
+      console.log( product );
+      
+      product.total = product.price * product.quantity!;
+
+      return product;
+    })
+
+    console.log( this.otherProducts );
+    
+  }
+
+  calcularTotales() {
+    this.totales = this.products.reduce(( accProduct, currentProduct ) => {
+      
+      accProduct.quantity += currentProduct.quantity!;
+      accProduct.total += currentProduct.total!;
+      accProduct.price += currentProduct.price!;
+      // Asegúrate de mantener otras propiedades del objeto
+
+      return accProduct;
+    }, { quantity: 0, total: 0, price: 0 } );
+
+    console.log( this.totales );
+    
+  }
 
   // Ciclos de vida
 

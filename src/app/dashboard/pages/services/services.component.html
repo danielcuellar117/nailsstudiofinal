@@ -23,7 +23,7 @@
                 <h3>{{service.name}}</h3>
                 <p class="service_description">{{service.description}}</p>
             </td>
-            <td>{{service.price! | currency}}</td>
+            <td>{{service.price! | currency:'USD':'symbol':'1.0-0' }}</td>
             <td>
                 <button 
                 class="btn btn-update" 
