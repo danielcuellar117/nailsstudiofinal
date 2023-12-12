@@ -36,6 +36,19 @@ h2 {
   font-size: 24px;
   overflow: scroll;
 }
+.shopping{
+  position: fixed;
+  margin: .3rem .5rem;
+  right:1;
+  top:1;
+  cursor: pointer;
+  padding: 0px;;
+}
+.carrito-img{
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+}
 
 
 @media ( min-width: 568px ) {
