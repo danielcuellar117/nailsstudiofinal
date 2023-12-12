@@ -13,10 +13,16 @@
   min-height: 100%;
   position: relative;
 }
+<<<<<<< HEAD
 body {
 
   background-color: #FFF6F4 ;
   margin: 0;
+=======
+body{
+    background-color: #FFF6F4 ;
+    margin: 0; 
+>>>>>>> af3c8dd00a2b5e081e479053236ec232e4b970ad
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
 }

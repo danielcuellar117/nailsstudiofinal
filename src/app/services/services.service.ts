@@ -26,7 +26,7 @@ export class ServiceService {
 
   getAllServices() {
     
-    return this.http.get<ResponseServices>( `${ this.BASE_URL }/services`)
+    return this.http.get<ResponseServices>( `${ this.BASE_URL }/services`, { headers: this.headers })
   }
 
   getServiceById( id: string ) {

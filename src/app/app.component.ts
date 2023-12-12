@@ -10,18 +10,17 @@ export class AppComponent {
   title = 'nailsstudiofinalfrontend';
   isLoggedIn: any = undefined;
 
-  constructor( public authService: AuthService ) {
+  ngOnInit(){
+    console.log(this.user)
+  }
 
+  constructor( public authService: AuthService ) {
     if (this.authService.user.hasOwnProperty("role")) {
       this.isLoggedIn= false;
     } else {
       this.isLoggedIn= true;
     }
   }
-
-  ngOnInit(){
-  }
-
   get user() {
     return this.authService.user;
   }

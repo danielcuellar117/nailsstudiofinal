@@ -17,20 +17,24 @@ import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   /** Ruta a los componentes del Modulo Auth */
+  {path: "", component: HomeComponent},
+  {path: "servicios", component: ServicesComponent},
+  // {path: "", component: HomeComponent},
+  // {path: "home", component: HomeComponent},
+  {path: "agenda-una-cita", component: AgendaComponent},
+  {path: "tienda", component: StoreComponent},
+  {path: "talleres", component: TalleresComponent},
   {
     path: 'auth',
     loadChildren: () => import( './auth/auth.module' ).then( module => module.AuthModule )
   },
-  {path: "", component: HomeComponent},
-  {path: "servicios", component: ServicesComponent},
   {
     path: 'dashboard',
     loadChildren: () => import( './dashboard/dashboard.module' ).then( module => module.DashboardModule )
   },
-
   // {path: "", component: HomeComponent},
   {path: "home", component: HomeComponent},
-  { path: 'agenda-una-cita/:serviceName', component: AgendaComponent },
+  {path: 'agenda-una-cita/:serviceName', component: AgendaComponent },
   {path: "agenda-una-cita", component: AgendaComponent},
   {path: "tienda", component: StoreComponent},
   {path: "talleres", component: TalleresComponent},

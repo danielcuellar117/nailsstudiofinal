@@ -4,9 +4,7 @@
 </ng-container>
 
 <ng-template #tallerList>
-  <h3>Talleres registrados</h3>
-
-  
+  <div class="contenido">
   <table>
     <thead>
       <tr class="tri">
@@ -25,7 +23,7 @@
           <h3>{{ taller.name }}</h3>
           <p class="taller__description">{{ taller.description }}</p>
         </td>
-        <td>{{ taller.price }}</td>
+        <td>{{ taller.price | currency:'USD':'symbol':'1.0-0' }}</td>
         <td>
           <!-- <button
             class="btn btn-update"
@@ -42,18 +40,8 @@
         </td>
       </tr>
     </tbody>
-    <tfoot>
-      <tr>
-        <th scope="row">Totals</th>
-        <td></td>
-        <td></td>
-        <td>16</td>
-        <td>2050</td>
-        <td>16750</td>
-        <th scope="row">Actions</th>
-      </tr>
-    </tfoot>
   </table>
+</div>
 
 
 </ng-template>

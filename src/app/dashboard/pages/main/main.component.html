@@ -33,13 +33,11 @@
                 <a *ngIf="user.role == 'admin'" routerLink="/no-existe">No existe</a>
             </li>
             <li>
-                <a routerLink="/home" (click)="logout()" class="btn"><button>Logout</button></a>
+                <a (click)="logout()" class="btn"><button>Logout</button></a>
             </li>
         </ul>
     </div>
 </nav>
-
 </header>
-
 <router-outlet></router-outlet>
 
