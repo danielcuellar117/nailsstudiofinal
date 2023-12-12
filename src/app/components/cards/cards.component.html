@@ -7,9 +7,10 @@
     <p class="card-p">{{ products.description }}</p>
     <div class="card-footer">
       <span class="card-price">${{ products.price }}.000</span>
-      <button class="card-btn">Comprar</button>
+      <button class="card-btn" (click)="saveStorage()">Comprar</button>
     </div>
   </div>
+  
 
 <!-- <div class="card">
   <img [src]="imagen.url" alt="{{ imagen.descripcion }}">

@@ -21,18 +21,19 @@ import { MainComponent } from './auth/pages/main/main.component';
 import { CardServicesComponent } from './components/card-services/card-services.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { BannerServiciosComponent } from './components/banner-servicios/banner-servicios.component';
+import { CarComponent } from './components/car/car.component';
+import { HeaderDashboardComponent } from './components/header-dashboard/header-dashboard.component';
 
 @NgModule({
   declarations: [
     //pages
     AppComponent,
-    TalleresComponent,
     AgendaComponent,
     StoreComponent,
     HomeComponent,
-    TalleresComponent,
     // componenets
     HeaderComponent,
+    HeaderDashboardComponent,
     FooterComponent,
     CardsComponent,
     BannerTiendaComponent,
@@ -42,6 +43,8 @@ import { BannerServiciosComponent } from './components/banner-servicios/banner-s
     CardTallerComponent,
     CardServicesComponent,
     ServicesComponent,
+    CarComponent,
+    TalleresComponent,
     BannerServiciosComponent
 
   ],

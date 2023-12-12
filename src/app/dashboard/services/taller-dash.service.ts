@@ -36,6 +36,6 @@ export class TallerDashService {
 
   deleteTaller( id: string ) {
 
-    return this.http.delete(`${ this.BASE_URL }/talleres/${ id }`);
+    return this.http.delete(`${ this.BASE_URL }/talleres/${ id }`, { headers: this.headers });
   }
 }
