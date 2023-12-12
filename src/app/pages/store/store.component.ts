@@ -15,6 +15,7 @@ export class StoreComponent implements OnInit {
   total: any = 0;
   modal!: boolean;
   carr!: boolean;
+  contador = 0;
 
 
   constructor(
@@ -46,6 +47,7 @@ export class StoreComponent implements OnInit {
   }
 
   addProduct( product: any ) {
+    this.contador +=1;
 
     if (this.shoppingCart.some((item:any) => item._id === product._id)) {
       if (product.count < product.quantity) {
@@ -59,7 +61,6 @@ export class StoreComponent implements OnInit {
       product.count = 1
       this.shoppingCart.push( product );
     }
-    this.carr = true;
 
 
     localStorage.setItem( 'shoppingCart', JSON.stringify( this.shoppingCart ) );
