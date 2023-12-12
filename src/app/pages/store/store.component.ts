@@ -14,6 +14,7 @@ export class StoreComponent implements OnInit {
   carrito: any = [];
   total: any = 0;
   modal!: boolean;
+  carr!: boolean;
 
 
   constructor(
@@ -28,12 +29,16 @@ export class StoreComponent implements OnInit {
     this.productService.getAllProducts().subscribe(data  => {
       console.log(data);
 
-      this.products = data.data;
 
+      this.products = data.data;
 
       this.carritoService.$modal.subscribe(value =>{
         this.modal = value
       })
+      // this.carritoService.$modal.subscribe(data =>{
+      //   this.products = data
+      // })
+
     })
   }
   opencarrito(){
@@ -54,6 +59,9 @@ export class StoreComponent implements OnInit {
       product.count = 1
       this.shoppingCart.push( product );
     }
+    this.carr = true;
+
+
     localStorage.setItem( 'shoppingCart', JSON.stringify( this.shoppingCart ) );
     console.log( 'lista en el carrito >>', this.shoppingCart );
   }
