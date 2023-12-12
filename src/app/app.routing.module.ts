@@ -5,6 +5,7 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
 import { StoreComponent } from './pages/store/store.component';
 import { TalleresComponent } from './pages/talleres/talleres.component';
 import { HomeComponent } from './pages/home/home.component';
+import { BannerServiciosComponent } from './components/banner-servicios/banner-servicios.component';
 
 // const routes: Routes = [
   // {path: "", component: HomeComponent},
