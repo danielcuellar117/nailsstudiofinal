@@ -45,8 +45,8 @@ import { HeaderDashboardComponent } from './components/header-dashboard/header-d
     ServicesComponent,
     CarComponent,
     TalleresComponent,
-    BannerServiciosComponent
-
+    BannerServiciosComponent,
+    TalleresComponent
   ],
   imports: [
     BrowserModule,
