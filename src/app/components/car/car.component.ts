@@ -26,11 +26,11 @@ export class CarComponent {
   }
 
   cleanCarrito(){
-    this.cleanService.$modal.emit(false)
-    localStorage.clear()
+    localStorage.removeItem('shoppingCart');
+    this.carrito = localStorage.getItem('shoppingCart')
+    this.carrito = JSON.parse(this.carrito)
     this.total = 0;
-    console.log("borrando localstorage");
-    this.carrito = [];
+    return this.carrito, this.total;
   }
 
   car(){
