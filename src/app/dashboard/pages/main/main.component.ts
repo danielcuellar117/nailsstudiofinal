@@ -8,11 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> af3c8dd00a2b5e081e479053236ec232e4b970ad
   menuVariable: boolean= false;
   menu_icon_variable: boolean=false;
 
