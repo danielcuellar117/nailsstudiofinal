@@ -6,9 +6,6 @@ import { environment } from 'src/environments/environment.development';
 import { Service } from '../interfaces/service';
 import { map, tap } from 'rxjs';
 
-
-const headers = ''
-
 @Injectable({
   providedIn: 'root'
 })

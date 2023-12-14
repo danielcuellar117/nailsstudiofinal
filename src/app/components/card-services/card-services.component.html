@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <main>
   <!-- <pre>{{service| json}}</pre> -->
       <div class="temario-outter">
@@ -12,7 +11,7 @@
                 <div class="informacion">
                   <h2 class="titu">{{service.name}}</h2>
                   <p class="descripcion">{{ service.description }}</p>
-                  <p class="precio"> $ {{ service.price | number:'1.0-0' }}</p>
+                  <!-- <p class="precio"> $ {{ service.price | currency:'USD':'symbol':'1.0-0' }}</p> -->
                   <p class="precio-antes"> $ {{service.price1}}</p>
                 </div>
                 <div class="action">
@@ -24,7 +23,6 @@
         </div>
       </div>
   </main>
-=======
 <div class="modern-card">
   <div class="card-img">
     <img class="img-img" [src]="service.urlImage" alt="service">
@@ -33,13 +31,10 @@
     <div class="card-info">
       <h2 class="card-title">{{service.name}}</h2>
       <p class="card-description">{{ service.description }}</p>
-      <p class="card-price"> $ {{ service.price | number:'1.0-0' }}</p>
+      <!-- <p class="card-price"> $ {{ service.price | currency:'USD':'symbol':'1.0-0' }}</p> -->
     </div>
-    <div >
+    <div>
       <button class="card-action" (click)="agendarServicio(service.name)">Agendar</button>
     </div>
   </div>
 </div>
-
-          
->>>>>>> c7ea6c0155219ab5c8a256c11710bc5887bbb7a4
