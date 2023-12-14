@@ -1,7 +1,11 @@
 <h2>Lista de servicios</h2>
+
+<h1>Privado</h1>
+
 <ng-container *ngIf="services && services.length > 0; then serviceList; else noServices"></ng-container>
 
 <ng-template #serviceList>
+  <h3>Servicios registrados</h3>
     <table>
         <thead>
             <tr class="tri">
@@ -22,12 +26,12 @@
             </td>
             <td>{{service.price! | currency:'USD':'symbol':'1.0-0' }}</td>
             <td>
-                <button 
-                class="btn btn-update" 
+                <button
+                class="btn btn-update"
                 (click)="updateServiceButton(service._id)">
             Edit
             </button>
-            <button 
+            <button
             class="btn btn-delete"
             (click)="removeServiceButton(service._id)"
             >
@@ -36,11 +40,10 @@
             </td>
             </tr>
         </tbody>
+      </table>
 
-    </table>
 </ng-template>
 
 <ng-template #noServices>
   <h3>No has registrado servicios</h3>
 </ng-template>
-

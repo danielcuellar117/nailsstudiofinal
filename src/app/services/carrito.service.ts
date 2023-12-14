@@ -9,4 +9,5 @@ export class CarritoService {
   constructor() { }
 
   $modal = new EventEmitter<any>();
+  $carr = new EventEmitter<any>();
 }

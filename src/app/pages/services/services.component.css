@@ -1,9 +1,19 @@
+
+*{
+    min-height: 100%;
+}
+
 .service-container {
-    margin: 15px;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
     justify-content: center;
-    gap: 1rem;
+    background-color: #ffdcdc ;
+    background-image:  url(../../../assets/images/Home/pattern_plus-3_1_2_0-0_0_1__ffffff00_f193a1_f193a1.png);
+    background-repeat: repeat;
+    background-size:auto;
+    background-attachment: fixed;
+
 }
 
 .buscas-algo-mas {

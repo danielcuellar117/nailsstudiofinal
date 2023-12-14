@@ -10,12 +10,12 @@ import { Router } from '@angular/router';
 export class MainComponent {
   menuVariable: boolean= false;
   menu_icon_variable: boolean=false;
-  
+
   openMenu() {
     this.menuVariable = !this.menuVariable;
     this.menu_icon_variable= !this.menu_icon_variable;
   }
-  constructor( 
+  constructor(
     private authService: AuthService,
     private router: Router
     ) {}
@@ -24,9 +24,11 @@ export class MainComponent {
   get user() {
     return this.authService.user;
   }
+
   logout(){
     localStorage.removeItem('token');
     this.router.navigateByUrl('/');
     window.location.reload();
-  } 
+  }
+
 }

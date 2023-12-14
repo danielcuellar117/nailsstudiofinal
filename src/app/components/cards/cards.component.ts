@@ -12,8 +12,8 @@ export class CardsComponent {
   @Output() dataProduct = new EventEmitter<any>()
 
 
-  saveStorage() {
 
+  saveStorage() {
     this.dataProduct.emit( this.products );
     // const a:string = JSON.stringify(this.products.name)
     // localStorage.setItem('car',JSON.stringify(a))

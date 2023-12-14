@@ -1,4 +1,15 @@
+
+/* .header{
+    background-color: #ffdcdc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: 5px 10%;
+} */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
 header {
     height: 5rem;
     background-color: #ffdcdc;
@@ -35,7 +46,7 @@ header {
 .nav-links li:hover{
     transform: scale(1.1);
     transition: 0.3s;
-    
+
 }
 
 .nav-links a{
@@ -65,7 +76,7 @@ header {
 /* Aqui empieza el menu hamburguesa */
 
 /*.nav_toggle{
-    display: none; /* Por defecto, ocultamos el icono de hamburguesa en pantallas grandes 
+    display: none; /* Por defecto, ocultamos el icono de hamburguesa en pantallas grandes
     flex-direction: column;
 }
 */
@@ -95,7 +106,7 @@ header {
         text-align: center;
         margin: 1%;
     }
-    
+
     .menu_icon span{
         width: 30px;
         height: 4px;
@@ -103,7 +114,7 @@ header {
         margin-bottom: 5px;
         border-radius: 2px;
         transform-origin: 5px 0px;
-        transition: all 0.2s linear;        
+        transition: all 0.2s linear;
     }
     .menu_icon {
         display: flex !important;
@@ -144,11 +155,10 @@ header {
 .menu-toggle {
     display: none;
   }
-  
+
   .menu {
     display: none;
   }*/
-
 
 .navegacion{
 	width: 100%;
@@ -225,7 +235,7 @@ header {
     ul#_links {
         z-index: 1;
     }
-	
+
 /* Menu Hamburguesa */
 .nav-links{
 	position: fixed;
@@ -250,7 +260,7 @@ header {
 	margin-bottom: 5px;
 	border-radius: 2px;
 	transform-origin: 5px 0px;
-	transition: all 0.2s linear;        
+	transition: all 0.2s linear;
 }
 .menu_icon {
 	display: flex !important;

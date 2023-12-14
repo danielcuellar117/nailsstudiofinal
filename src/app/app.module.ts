@@ -20,6 +20,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './auth/pages/main/main.component';
 import { CardServicesComponent } from './components/card-services/card-services.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { BannerServiciosComponent } from './components/banner-servicios/banner-servicios.component';
 import { CarComponent } from './components/car/car.component';
 
 @NgModule({
@@ -41,6 +42,8 @@ import { CarComponent } from './components/car/car.component';
     CardServicesComponent,
     ServicesComponent,
     CarComponent,
+    TalleresComponent,
+    BannerServiciosComponent,
     TalleresComponent
   ],
   imports: [
