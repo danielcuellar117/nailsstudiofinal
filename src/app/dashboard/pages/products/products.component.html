@@ -1,5 +1,7 @@
 <h2>Lista de productos</h2>
 
+<pre>{{ totales | json }}</pre>
+
 <ng-container *ngIf="products && products.length > 0; then productList; else noProducts">
 </ng-container>
 
@@ -8,7 +10,7 @@
   <table>
     <thead>
       <tr class="tri">
-        <th>Preview</th>
+        <th>Vista previa</th>
         <th scope="col" >Nombre y descripción </th>
         <th scope="col">Categoria</th>
         <th scope="col">Cantidad</th>
@@ -28,32 +30,32 @@
         </td>
         <td>{{ product.category }}</td>
         <td>{{ product.quantity }}</td>
-        <td>{{ product.price }}</td>
-        <td>{{ product.price! * product.quantity! | currency }}</td>
+        <td>{{ product.price | currency:'USD':'symbol':'1.0-0' }}</td>
+        <td>{{ product.total! | currency:'USD':'symbol':'1.0-0' }}</td>
         <td>
           <button
             class="btn btn-update"
             (click)="update( product._id )"
           >
-            Edit
+            Editar
           </button>
           <button
             class="btn btn-delete"
             (click)="remove( product._id )"
           >
-            Delete
+            Borrar
           </button>
         </td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
-        <th scope="row">Totals</th>
+        <th scope="row">Total</th>
         <td></td>
         <td></td>
-        <td>16</td>
-        <td>2050</td>
-        <td>16750</td>
+        <td>{{ totales.quantity }}</td>
+        <td>{{ totales.price | currency:'USD':'symbol':'1.0-0' }}</td>
+        <td>{{ totales.total | currency:'USD':'symbol':'1.0-0' }}</td>
         <th scope="row">Actions</th>
       </tr>
     </tfoot>

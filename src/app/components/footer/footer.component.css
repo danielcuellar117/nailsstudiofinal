@@ -1,7 +1,9 @@
-.footer{
-    position: relative;
-}
 
+.footer{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+}
 .footer-inner{
     background-color: #ffdcdc;
     display: flex;

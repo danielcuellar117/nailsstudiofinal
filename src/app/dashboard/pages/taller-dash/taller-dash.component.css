@@ -10,8 +10,16 @@ h2 {
     font-size: 1.2rem;
   }
   
+  .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
   table {
     width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
     border-collapse: collapse;
   }
   
@@ -68,16 +76,19 @@ h2 {
   tfoot {
     background-color: pink;
     color: #353535;
+    max-width: 70%;
+    width: 100%;
+    margin: 0 auto;
   }
   
   /* Estilos para la fila de totales */
   tfoot th {
-    padding: 20px;
+    padding: 16px;
     text-align: right;
   }
   
   /* Estilos para las acciones en la fila de totales */
-  tfoot .btn {
+.btn {
     margin: 0 5px;
   }
   
