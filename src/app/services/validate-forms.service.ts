@@ -38,7 +38,7 @@ export class ValidateFormsService {
   validateDescription( control: AbstractControl ): { [key: string]: boolean } | null {
     const value = control.value;
 
-    if ( value && (value.length < 3 || value.length > 2000 ) ) {
+    if ( value && (value.length < 3 || value.length > 1500 ) ) {
       return { invalidDescriptionLength: true };
     }
 
