@@ -8,13 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-  menuVariable: boolean= false;
-  menu_icon_variable: boolean=false;
+  
 
-  openMenu() {
-    this.menuVariable = !this.menuVariable;
-    this.menu_icon_variable= !this.menu_icon_variable;
-  }
+
   constructor(
     private authService: AuthService,
     private router: Router

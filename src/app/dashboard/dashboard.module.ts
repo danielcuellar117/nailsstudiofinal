@@ -26,7 +26,7 @@ import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.co
     NewServiceComponent,
     UpdateServiceComponent,
     NewTallerComponent,
-    TallerDashComponent
+    TallerDashComponent,
   ],
   imports: [
     CommonModule,
