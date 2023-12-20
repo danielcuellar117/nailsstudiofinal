@@ -79,14 +79,14 @@
       cols="20"
       rows="5"
       minlength="3"
-      maxlength="140"
+      maxlength="2000"
     ></textarea>
     <div
       *ngIf="tallerForm.get( 'description' )?.invalid && ( tallerForm.get( 'description' )?.dirty || tallerForm.get( 'description' )?.touched )"
       class="error-message"
     >
       <small *ngIf="tallerForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
-        La descripción debe tener una longitud de entre 3 a 140 caracteres
+        La descripción debe tener una longitud de entre 3 a 1000 caracteres
       </small>
     </div>
   </div>

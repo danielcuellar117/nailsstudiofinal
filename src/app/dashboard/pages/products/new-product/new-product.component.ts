@@ -22,7 +22,7 @@ export class NewProductComponent {
     quantity: [ '', [ Validators.required, this.validateForm.validateQuantity ] ],
     urlImage: [ '', this.validateForm.validateNormalUrl ],
     category: [ '' ],
-    description: [ '', [ this.validateForm.validateDescription, Validators.maxLength(15) ] ]
+    description: [ '', [ this.validateForm.validateDescription, Validators.maxLength(1500) ] ]
   });
 
   constructor(
