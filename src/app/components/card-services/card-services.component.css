@@ -10,6 +10,7 @@
   justify-content: center;
   margin: 1rem;
   background-color: #eceff1;
+  font-weight: 100;
 }
 
 .modern-card:hover {

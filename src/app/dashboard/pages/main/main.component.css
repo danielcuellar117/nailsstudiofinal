@@ -10,10 +10,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-
+*{
+    font-weight: 100;
+}
     
         .main-section{
             min-height: 100vh;
+            font-weight: 100;
         }
         .card-main{
             margin-bottom: 1rem;
